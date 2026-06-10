@@ -1,0 +1,1279 @@
+{
+ "addresses": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+   "short": "0x0282a26e",
+   "total_events": 47429,
+   "events_by_type": {
+    "order": 45656,
+    "sale": 773,
+    "transfer": 1000
+   },
+   "offer_kinds": {
+    "collection_offer": 45637,
+    "listing": 16,
+    "item_offer": 3
+   },
+   "buy_sell": {
+    "buy": 364,
+    "sell": 409,
+    "buy_volume_eth": 934.2137453889998,
+    "sell_volume_eth": 838.9721
+   },
+   "activity_start_iso": "2023-05-04T00:18:59Z",
+   "activity_end_iso": "2026-06-09T20:10:01Z",
+   "activity_start_ts": 1683159539,
+   "activity_end_ts": 1781035801
+  },
+  "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
+   "short": "0x8e8de062",
+   "total_events": 1365,
+   "events_by_type": {
+    "transfer": 728,
+    "sale": 637
+   },
+   "offer_kinds": {},
+   "buy_sell": {
+    "buy": 334,
+    "sell": 303,
+    "buy_volume_eth": 1075.2362447800003,
+    "sell_volume_eth": 841.1659000000005
+   },
+   "activity_start_iso": "2025-05-27T12:38:35Z",
+   "activity_end_iso": "2026-04-27T08:15:11Z",
+   "activity_start_ts": 1748349515,
+   "activity_end_ts": 1777277711
+  },
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+   "short": "0x400fe3cf",
+   "total_events": 78247,
+   "events_by_type": {
+    "order": 76761,
+    "transfer": 818,
+    "sale": 668
+   },
+   "offer_kinds": {
+    "item_offer": 76744,
+    "listing": 15,
+    "collection_offer": 2
+   },
+   "buy_sell": {
+    "buy": 363,
+    "sell": 305,
+    "buy_volume_eth": 822.863704568998,
+    "sell_volume_eth": 799.2042000000001
+   },
+   "activity_start_iso": "2024-03-01T17:50:59Z",
+   "activity_end_iso": "2026-06-09T20:56:13Z",
+   "activity_start_ts": 1709315459,
+   "activity_end_ts": 1781038573
+  }
+ },
+ "collections": {
+  "clonex": {
+   "type_order": 11,
+   "orders": 11,
+   "type_transfer": 450,
+   "type_sale": 445,
+   "buy": 228,
+   "buy_volume_eth": 65.84123,
+   "sell": 217,
+   "sell_volume_eth": 63.8533,
+   "contract": "0x49cf6f5d44e70224e2e23fdcdd2c053f30ada28b",
+   "offers": 11,
+   "sales": 445,
+   "volume_eth": 129.69453,
+   "total_events": 906
+  },
+  "lilpudgys": {
+   "type_order": 13,
+   "orders": 13,
+   "type_sale": 463,
+   "sell": 225,
+   "sell_volume_eth": 148.0655,
+   "type_transfer": 476,
+   "buy": 238,
+   "buy_volume_eth": 155.517077,
+   "contract": "0x524cab2ec69124574082676e6f654a18df49a048",
+   "offers": 13,
+   "sales": 463,
+   "volume_eth": 303.582577,
+   "total_events": 952
+  },
+  "otherside-koda": {
+   "type_order": 3,
+   "orders": 3,
+   "type_sale": 6,
+   "sell": 2,
+   "sell_volume_eth": 1.355,
+   "type_transfer": 8,
+   "buy": 4,
+   "buy_volume_eth": 2.836,
+   "contract": "0xe012baf811cf9c05c408e879c399960d1f305903",
+   "offers": 3,
+   "sales": 6,
+   "volume_eth": 4.191,
+   "total_events": 17
+  },
+  "azuki": {
+   "type_order": 1,
+   "orders": 1,
+   "type_transfer": 24,
+   "type_sale": 23,
+   "sell": 11,
+   "sell_volume_eth": 18.895,
+   "buy": 12,
+   "buy_volume_eth": 21.818,
+   "contract": "0xed5af388653567af2f388e6224dc7c4b3241c544",
+   "offers": 1,
+   "sales": 23,
+   "volume_eth": 40.713,
+   "total_events": 48
+  },
+  "doodles-official": {
+   "type_transfer": 100,
+   "type_sale": 72,
+   "sell": 33,
+   "sell_volume_eth": 108.519,
+   "buy": 39,
+   "buy_volume_eth": 134.1806,
+   "contract": "0x8a90cab2b38dba80c64b7734e58ee1db38b8992e",
+   "offers": 0,
+   "sales": 72,
+   "volume_eth": 242.6996,
+   "total_events": 172
+  },
+  "metamask-penguin-open-edition": {
+   "type_transfer": 4,
+   "contract": "0x7aa4ac1399e2af80fb19c6d383e50232ccb57ad1",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 4
+  },
+  "metamask-penguin-black": {
+   "type_transfer": 4,
+   "contract": "0x9edacc116f3d01eba04e35dd9678ec71ce7b3686",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 4
+  },
+  "degods-eth": {
+   "type_sale": 186,
+   "sell": 75,
+   "sell_volume_eth": 475.8682,
+   "type_transfer": 302,
+   "buy": 111,
+   "buy_volume_eth": 595.981441,
+   "contract": "0x8821bee2ba0df28761afff119d66390d594cd280",
+   "offers": 0,
+   "sales": 186,
+   "volume_eth": 1071.849641,
+   "total_events": 488
+  },
+  "meebits": {
+   "type_transfer": 4,
+   "type_sale": 4,
+   "sell": 2,
+   "sell_volume_eth": 0.79,
+   "buy": 2,
+   "buy_volume_eth": 0.0,
+   "contract": "0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7",
+   "offers": 0,
+   "sales": 4,
+   "volume_eth": 0.79,
+   "total_events": 8
+  },
+  "pudgypenguins": {
+   "type_transfer": 562,
+   "type_sale": 489,
+   "sell": 246,
+   "sell_volume_eth": 1416.0695,
+   "buy": 243,
+   "buy_volume_eth": 1392.069163,
+   "type_order": 76749,
+   "orders": 76749,
+   "contract": "0xbd3531da5cf5857e7cfaa92426877b022e612cf8",
+   "offers": 76749,
+   "sales": 489,
+   "volume_eth": 2808.138663,
+   "total_events": 77800
+  },
+  "boredapeyachtclub": {
+   "type_transfer": 98,
+   "type_sale": 56,
+   "sell": 19,
+   "sell_volume_eth": 149.475,
+   "buy": 37,
+   "buy_volume_eth": 345.78798,
+   "contract": "0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d",
+   "offers": 0,
+   "sales": 56,
+   "volume_eth": 495.26298,
+   "total_events": 154
+  },
+  "moonbirds": {
+   "type_transfer": 18,
+   "type_sale": 18,
+   "sell": 9,
+   "sell_volume_eth": 20.636,
+   "buy": 9,
+   "buy_volume_eth": 20.581,
+   "contract": "0x23581767a106ae21c074b2276d25e5c3e136a68b",
+   "offers": 0,
+   "sales": 18,
+   "volume_eth": 41.217,
+   "total_events": 36
+  },
+  "nakamigos": {
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.141,
+   "type_transfer": 2,
+   "buy": 1,
+   "buy_volume_eth": 0.0,
+   "contract": "0xd774557b647330c91bf44cfeab205095f7e6c367",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.141,
+   "total_events": 4
+  },
+  "mrfreeman": {
+   "type_transfer": 2,
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.0066,
+   "buy": 1,
+   "buy_volume_eth": 0.006987,
+   "contract": "0x945d605916e1eaa22b97e39c5e8b6940042a079c",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.013587,
+   "total_events": 4
+  },
+  "cool-cats-nft": {
+   "type_transfer": 4,
+   "type_sale": 4,
+   "sell": 2,
+   "sell_volume_eth": 0.36,
+   "buy": 2,
+   "buy_volume_eth": 0.0,
+   "contract": "0x1a92f7381b9f03921564a437210bb9396471050c",
+   "offers": 0,
+   "sales": 4,
+   "volume_eth": 0.36,
+   "total_events": 8
+  },
+  "sappy-seals": {
+   "type_transfer": 116,
+   "type_sale": 107,
+   "sell": 49,
+   "sell_volume_eth": 16.5334,
+   "buy": 58,
+   "buy_volume_eth": 21.383399,
+   "contract": "0x364c828ee171616a39897688a831c2499ad972ec",
+   "offers": 0,
+   "sales": 107,
+   "volume_eth": 37.916799,
+   "total_events": 223
+  },
+  "gemesis": {
+   "type_transfer": 4,
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.0272,
+   "buy": 1,
+   "buy_volume_eth": 0.02729,
+   "contract": "0xbe9371326f91345777b04394448c23e2bfeaa826",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.05449,
+   "total_events": 6
+  },
+  "bitmappunks": {
+   "type_transfer": 224,
+   "type_sale": 97,
+   "sell": 85,
+   "sell_volume_eth": 0.0875,
+   "buy": 12,
+   "buy_volume_eth": 0.010071,
+   "contract": "0xbbbba1ee822c9b8fc134dea6adfc26603a9cbbbb",
+   "offers": 0,
+   "sales": 97,
+   "volume_eth": 0.09757,
+   "total_events": 321
+  },
+  "y00ts-eth": {
+   "type_transfer": 12,
+   "type_sale": 7,
+   "buy": 6,
+   "buy_volume_eth": 4.4869,
+   "sell": 1,
+   "sell_volume_eth": 1.25,
+   "contract": "0xfd1b0b0dfa524e1fd42e7d51155a663c581bbd50",
+   "offers": 0,
+   "sales": 7,
+   "volume_eth": 5.7369,
+   "total_events": 19
+  },
+  "blur-care-package-1": {
+   "type_transfer": 1,
+   "contract": "0x010b9e7394a21a495788f7cdd04a5a373fc815e0",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 1
+  },
+  "mutant-ape-yacht-club": {
+   "type_sale": 23,
+   "sell": 11,
+   "sell_volume_eth": 51.777,
+   "type_transfer": 30,
+   "buy": 12,
+   "buy_volume_eth": 64.0475,
+   "contract": "0x60e4d786628fea6478f785a6d7e704777c86a7c6",
+   "offers": 0,
+   "sales": 23,
+   "volume_eth": 115.8245,
+   "total_events": 53
+  },
+  "pixanimal20000": {
+   "type_transfer": 2,
+   "contract": "0x13b99bcbd7f8af8e605e01660d2f7ff9e273fe08",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 2
+  },
+  "dragonegg-3": {
+   "type_transfer": 1,
+   "contract": "0xe8fde5ad759fba75d4153a639e12d71e44ce9307",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 1
+  },
+  "normies": {
+   "type_transfer": 4,
+   "type_sale": 4,
+   "sell": 2,
+   "sell_volume_eth": 0.0667,
+   "buy": 2,
+   "buy_volume_eth": 0.092,
+   "contract": "0x9eb6e2025b64f340691e424b7fe7022ffde12438",
+   "offers": 0,
+   "sales": 4,
+   "volume_eth": 0.1587,
+   "total_events": 8
+  },
+  "memelandcaptainz": {
+   "type_transfer": 2,
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.208,
+   "buy": 1,
+   "buy_volume_eth": 0.0,
+   "contract": "0x769272677fab02575e84945f03eca517acc544cc",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.208,
+   "total_events": 4
+  },
+  "mocaverse": {
+   "type_transfer": 2,
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.225,
+   "buy": 1,
+   "buy_volume_eth": 0.0,
+   "contract": "0x59325733eb952a92e069c87f0a6168b29e80627f",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.225,
+   "total_events": 4
+  },
+  "gold-of-earth-nft": {
+   "type_transfer": 1,
+   "contract": "0x267e2af41a7252110e8d427d214631b6c26f8c36",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 1
+  },
+  "sproto-gremlins": {
+   "type_transfer": 2,
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.287,
+   "buy": 1,
+   "buy_volume_eth": 0.0,
+   "contract": "0xeeca64ea9fcf99a22806cd99b3d29cf6e8d54925",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.287,
+   "total_events": 4
+  },
+  "poiuycat": {
+   "type_transfer": 1,
+   "contract": "0xac0a35a2366b1346b1e6259bd45ad47e3b564911",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 1
+  },
+  "good-vibes-club": {
+   "type_transfer": 6,
+   "type_sale": 5,
+   "sell": 2,
+   "sell_volume_eth": 0.861,
+   "buy": 3,
+   "buy_volume_eth": 0.975,
+   "type_order": 1,
+   "orders": 1,
+   "contract": "0xb8ea78fcacef50d41375e44e6814ebba36bb33c4",
+   "offers": 1,
+   "sales": 5,
+   "volume_eth": 1.836,
+   "total_events": 12
+  },
+  "zogz-editions-by-matt-furie": {
+   "type_transfer": 2,
+   "type_sale": 2,
+   "buy": 2,
+   "buy_volume_eth": 0.00506,
+   "contract": "0x808e5cd160d8819ca24c2053037049eb611d0542",
+   "offers": 0,
+   "sales": 2,
+   "sell": 0,
+   "volume_eth": 0.00506,
+   "total_events": 4
+  },
+  "metamask-penguin-orange": {
+   "type_transfer": 2,
+   "contract": "0x27f8c6b201b9472c21c018acfa6ae2c1b821f807",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 2
+  },
+  "nftbutler": {
+   "type_transfer": 2,
+   "type_sale": 1,
+   "buy": 1,
+   "buy_volume_eth": 0.899,
+   "contract": "0x495f947276749ce646f68ac8c248420045cb7b5e",
+   "offers": 0,
+   "sales": 1,
+   "sell": 0,
+   "volume_eth": 0.899,
+   "total_events": 3
+  },
+  "rarible": {
+   "type_transfer": 2,
+   "contract": "0xb66a603f4cfe17e3d27b87a8bfcad319856518b8",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 2
+  },
+  "rektguy": {
+   "type_transfer": 2,
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.27,
+   "buy": 1,
+   "buy_volume_eth": 0.0,
+   "contract": "0xb852c6b5892256c264cc2c888ea462189154d8d7",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.27,
+   "total_events": 4
+  },
+  "otherdeed-expanded": {
+   "type_sale": 2,
+   "sell": 1,
+   "sell_volume_eth": 0.0997,
+   "type_transfer": 2,
+   "buy": 1,
+   "buy_volume_eth": 0.0,
+   "contract": "0x790b2cf29ed4f310bf7641f013c65d4560d28371",
+   "offers": 0,
+   "sales": 2,
+   "volume_eth": 0.0997,
+   "total_events": 4
+  },
+  "silks-genesis-avatars": {
+   "type_sale": 1,
+   "buy": 1,
+   "buy_volume_eth": 0.0021,
+   "type_transfer": 1,
+   "contract": "0xa03e357a09e761e8d486a1419c74bf42e8d1b064",
+   "offers": 0,
+   "sales": 1,
+   "sell": 0,
+   "volume_eth": 0.0021,
+   "total_events": 2
+  },
+  "persona": {
+   "type_transfer": 28,
+   "type_sale": 16,
+   "sell": 2,
+   "sell_volume_eth": 0.3176,
+   "buy": 14,
+   "buy_volume_eth": 2.58,
+   "contract": "0xbabafdd8045740449a42b788a26e9b3a32f88ac1",
+   "offers": 0,
+   "sales": 16,
+   "volume_eth": 2.8976,
+   "total_events": 44
+  },
+  "the-dooplicator": {
+   "type_sale": 33,
+   "sell": 16,
+   "sell_volume_eth": 3.298,
+   "type_transfer": 34,
+   "buy": 17,
+   "buy_volume_eth": 3.185898,
+   "contract": "0x466cfcd0525189b573e794f554b8a751279213ac",
+   "offers": 0,
+   "sales": 33,
+   "volume_eth": 6.483898,
+   "total_events": 67
+  },
+  "fpdegods": {
+   "type_transfer": 4,
+   "contract": "0x00000000b8939d68f3db6c1fb91b37544f3c0b1b",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 4
+  },
+  "xoe-ecosystem-components-": {
+   "type_transfer": 1,
+   "contract": "0xbc458779e391ea5fc7ce9866799bd5cd571ec947",
+   "offers": 0,
+   "sales": 0,
+   "buy": 0,
+   "sell": 0,
+   "volume_eth": 0,
+   "total_events": 1
+  }
+ },
+ "top_collections": [
+  "pudgypenguins",
+  "lilpudgys",
+  "clonex",
+  "degods-eth",
+  "bitmappunks",
+  "sappy-seals",
+  "doodles-official",
+  "boredapeyachtclub",
+  "the-dooplicator",
+  "mutant-ape-yacht-club",
+  "azuki",
+  "persona",
+  "moonbirds",
+  "y00ts-eth",
+  "otherside-koda",
+  "good-vibes-club",
+  "meebits",
+  "cool-cats-nft",
+  "normies",
+  "gemesis",
+  "metamask-penguin-open-edition",
+  "metamask-penguin-black",
+  "nakamigos",
+  "mrfreeman",
+  "memelandcaptainz",
+  "mocaverse",
+  "sproto-gremlins",
+  "zogz-editions-by-matt-furie",
+  "rektguy",
+  "otherdeed-expanded",
+  "fpdegods",
+  "nftbutler",
+  "pixanimal20000",
+  "metamask-penguin-orange",
+  "rarible",
+  "silks-genesis-avatars",
+  "blur-care-package-1",
+  "dragonegg-3",
+  "gold-of-earth-nft",
+  "poiuycat",
+  "xoe-ecosystem-components-"
+ ],
+ "offer_kind_distribution": {
+  "item_offer": {
+   "count": 76747,
+   "share": 0.6269
+  },
+  "collection_offer": {
+   "count": 45639,
+   "share": 0.3728
+  },
+  "listing": {
+   "count": 31,
+   "share": 0.0003
+  }
+ },
+ "top5_bid_price_distribution": {
+  "pudgypenguins": {
+   "n": 76744,
+   "min": 3.44,
+   "max": 5.53,
+   "median": 4.44,
+   "unique_values": [
+    {
+     "price_eth": 3.44,
+     "count": 1
+    },
+    {
+     "price_eth": 3.75,
+     "count": 1
+    },
+    {
+     "price_eth": 3.85,
+     "count": 2
+    },
+    {
+     "price_eth": 3.86,
+     "count": 4
+    },
+    {
+     "price_eth": 3.87,
+     "count": 1
+    },
+    {
+     "price_eth": 3.94,
+     "count": 1
+    },
+    {
+     "price_eth": 4.03,
+     "count": 2
+    },
+    {
+     "price_eth": 4.05,
+     "count": 1
+    },
+    {
+     "price_eth": 4.08,
+     "count": 1
+    },
+    {
+     "price_eth": 4.09,
+     "count": 5
+    },
+    {
+     "price_eth": 4.1,
+     "count": 16
+    },
+    {
+     "price_eth": 4.11,
+     "count": 18
+    },
+    {
+     "price_eth": 4.12,
+     "count": 20
+    },
+    {
+     "price_eth": 4.13,
+     "count": 428
+    },
+    {
+     "price_eth": 4.14,
+     "count": 652
+    },
+    {
+     "price_eth": 4.15,
+     "count": 400
+    },
+    {
+     "price_eth": 4.16,
+     "count": 1329
+    },
+    {
+     "price_eth": 4.17,
+     "count": 1177
+    },
+    {
+     "price_eth": 4.18,
+     "count": 580
+    },
+    {
+     "price_eth": 4.19,
+     "count": 1049
+    },
+    {
+     "price_eth": 4.2,
+     "count": 1050
+    },
+    {
+     "price_eth": 4.21,
+     "count": 1898
+    },
+    {
+     "price_eth": 4.22,
+     "count": 1454
+    },
+    {
+     "price_eth": 4.23,
+     "count": 1465
+    },
+    {
+     "price_eth": 4.24,
+     "count": 1533
+    },
+    {
+     "price_eth": 4.25,
+     "count": 1924
+    },
+    {
+     "price_eth": 4.26,
+     "count": 1254
+    },
+    {
+     "price_eth": 4.27,
+     "count": 1153
+    },
+    {
+     "price_eth": 4.28,
+     "count": 1211
+    },
+    {
+     "price_eth": 4.29,
+     "count": 789
+    },
+    {
+     "price_eth": 4.3,
+     "count": 1726
+    },
+    {
+     "price_eth": 4.31,
+     "count": 1356
+    },
+    {
+     "price_eth": 4.32,
+     "count": 1549
+    },
+    {
+     "price_eth": 4.33,
+     "count": 1034
+    },
+    {
+     "price_eth": 4.34,
+     "count": 1006
+    },
+    {
+     "price_eth": 4.35,
+     "count": 1124
+    },
+    {
+     "price_eth": 4.36,
+     "count": 1205
+    },
+    {
+     "price_eth": 4.37,
+     "count": 704
+    },
+    {
+     "price_eth": 4.38,
+     "count": 1414
+    },
+    {
+     "price_eth": 4.39,
+     "count": 1062
+    },
+    {
+     "price_eth": 4.4,
+     "count": 3022
+    },
+    {
+     "price_eth": 4.41,
+     "count": 1120
+    },
+    {
+     "price_eth": 4.42,
+     "count": 824
+    },
+    {
+     "price_eth": 4.43,
+     "count": 1192
+    },
+    {
+     "price_eth": 4.44,
+     "count": 1089
+    },
+    {
+     "price_eth": 4.45,
+     "count": 1013
+    },
+    {
+     "price_eth": 4.46,
+     "count": 650
+    },
+    {
+     "price_eth": 4.47,
+     "count": 765
+    },
+    {
+     "price_eth": 4.48,
+     "count": 924
+    },
+    {
+     "price_eth": 4.49,
+     "count": 1239
+    },
+    {
+     "price_eth": 4.5,
+     "count": 767
+    },
+    {
+     "price_eth": 4.51,
+     "count": 1325
+    },
+    {
+     "price_eth": 4.52,
+     "count": 649
+    },
+    {
+     "price_eth": 4.53,
+     "count": 804
+    },
+    {
+     "price_eth": 4.54,
+     "count": 676
+    },
+    {
+     "price_eth": 4.55,
+     "count": 875
+    },
+    {
+     "price_eth": 4.56,
+     "count": 715
+    },
+    {
+     "price_eth": 4.57,
+     "count": 590
+    },
+    {
+     "price_eth": 4.58,
+     "count": 605
+    },
+    {
+     "price_eth": 4.59,
+     "count": 611
+    },
+    {
+     "price_eth": 4.6,
+     "count": 781
+    },
+    {
+     "price_eth": 4.61,
+     "count": 596
+    },
+    {
+     "price_eth": 4.62,
+     "count": 565
+    },
+    {
+     "price_eth": 4.63,
+     "count": 533
+    },
+    {
+     "price_eth": 4.64,
+     "count": 567
+    },
+    {
+     "price_eth": 4.65,
+     "count": 679
+    },
+    {
+     "price_eth": 4.66,
+     "count": 487
+    },
+    {
+     "price_eth": 4.67,
+     "count": 423
+    },
+    {
+     "price_eth": 4.68,
+     "count": 371
+    },
+    {
+     "price_eth": 4.69,
+     "count": 596
+    },
+    {
+     "price_eth": 4.7,
+     "count": 818
+    },
+    {
+     "price_eth": 4.71,
+     "count": 512
+    },
+    {
+     "price_eth": 4.72,
+     "count": 843
+    },
+    {
+     "price_eth": 4.73,
+     "count": 504
+    },
+    {
+     "price_eth": 4.74,
+     "count": 522
+    },
+    {
+     "price_eth": 4.75,
+     "count": 444
+    },
+    {
+     "price_eth": 4.76,
+     "count": 602
+    },
+    {
+     "price_eth": 4.77,
+     "count": 715
+    },
+    {
+     "price_eth": 4.78,
+     "count": 478
+    },
+    {
+     "price_eth": 4.79,
+     "count": 471
+    },
+    {
+     "price_eth": 4.8,
+     "count": 459
+    },
+    {
+     "price_eth": 4.81,
+     "count": 562
+    },
+    {
+     "price_eth": 4.82,
+     "count": 486
+    },
+    {
+     "price_eth": 4.83,
+     "count": 490
+    },
+    {
+     "price_eth": 4.84,
+     "count": 502
+    },
+    {
+     "price_eth": 4.85,
+     "count": 567
+    },
+    {
+     "price_eth": 4.86,
+     "count": 391
+    },
+    {
+     "price_eth": 4.87,
+     "count": 492
+    },
+    {
+     "price_eth": 4.88,
+     "count": 391
+    },
+    {
+     "price_eth": 4.89,
+     "count": 303
+    },
+    {
+     "price_eth": 4.9,
+     "count": 437
+    },
+    {
+     "price_eth": 4.91,
+     "count": 359
+    },
+    {
+     "price_eth": 4.92,
+     "count": 490
+    },
+    {
+     "price_eth": 4.93,
+     "count": 426
+    },
+    {
+     "price_eth": 4.94,
+     "count": 341
+    },
+    {
+     "price_eth": 4.95,
+     "count": 427
+    },
+    {
+     "price_eth": 4.96,
+     "count": 330
+    },
+    {
+     "price_eth": 4.97,
+     "count": 351
+    },
+    {
+     "price_eth": 4.98,
+     "count": 462
+    },
+    {
+     "price_eth": 4.99,
+     "count": 332
+    },
+    {
+     "price_eth": 5.0,
+     "count": 226
+    },
+    {
+     "price_eth": 5.01,
+     "count": 356
+    },
+    {
+     "price_eth": 5.02,
+     "count": 163
+    },
+    {
+     "price_eth": 5.03,
+     "count": 222
+    },
+    {
+     "price_eth": 5.04,
+     "count": 268
+    },
+    {
+     "price_eth": 5.05,
+     "count": 282
+    },
+    {
+     "price_eth": 5.06,
+     "count": 120
+    },
+    {
+     "price_eth": 5.07,
+     "count": 257
+    },
+    {
+     "price_eth": 5.08,
+     "count": 222
+    },
+    {
+     "price_eth": 5.09,
+     "count": 200
+    },
+    {
+     "price_eth": 5.1,
+     "count": 92
+    },
+    {
+     "price_eth": 5.11,
+     "count": 124
+    },
+    {
+     "price_eth": 5.12,
+     "count": 199
+    },
+    {
+     "price_eth": 5.13,
+     "count": 138
+    },
+    {
+     "price_eth": 5.14,
+     "count": 302
+    },
+    {
+     "price_eth": 5.15,
+     "count": 214
+    },
+    {
+     "price_eth": 5.16,
+     "count": 131
+    },
+    {
+     "price_eth": 5.17,
+     "count": 318
+    },
+    {
+     "price_eth": 5.18,
+     "count": 171
+    },
+    {
+     "price_eth": 5.19,
+     "count": 205
+    },
+    {
+     "price_eth": 5.2,
+     "count": 131
+    },
+    {
+     "price_eth": 5.21,
+     "count": 176
+    },
+    {
+     "price_eth": 5.22,
+     "count": 228
+    },
+    {
+     "price_eth": 5.23,
+     "count": 20
+    },
+    {
+     "price_eth": 5.24,
+     "count": 30
+    },
+    {
+     "price_eth": 5.25,
+     "count": 44
+    },
+    {
+     "price_eth": 5.26,
+     "count": 33
+    },
+    {
+     "price_eth": 5.27,
+     "count": 60
+    },
+    {
+     "price_eth": 5.28,
+     "count": 112
+    },
+    {
+     "price_eth": 5.29,
+     "count": 78
+    },
+    {
+     "price_eth": 5.3,
+     "count": 63
+    },
+    {
+     "price_eth": 5.31,
+     "count": 101
+    },
+    {
+     "price_eth": 5.32,
+     "count": 60
+    },
+    {
+     "price_eth": 5.33,
+     "count": 13
+    },
+    {
+     "price_eth": 5.34,
+     "count": 31
+    },
+    {
+     "price_eth": 5.35,
+     "count": 18
+    },
+    {
+     "price_eth": 5.36,
+     "count": 23
+    },
+    {
+     "price_eth": 5.37,
+     "count": 14
+    },
+    {
+     "price_eth": 5.38,
+     "count": 35
+    },
+    {
+     "price_eth": 5.39,
+     "count": 6
+    },
+    {
+     "price_eth": 5.4,
+     "count": 4
+    },
+    {
+     "price_eth": 5.41,
+     "count": 20
+    },
+    {
+     "price_eth": 5.42,
+     "count": 5
+    },
+    {
+     "price_eth": 5.43,
+     "count": 3
+    },
+    {
+     "price_eth": 5.44,
+     "count": 13
+    },
+    {
+     "price_eth": 5.48,
+     "count": 8
+    },
+    {
+     "price_eth": 5.49,
+     "count": 7
+    },
+    {
+     "price_eth": 5.5,
+     "count": 8
+    },
+    {
+     "price_eth": 5.52,
+     "count": 15
+    },
+    {
+     "price_eth": 5.53,
+     "count": 16
+    }
+   ]
+  },
+  "lilpudgys": {
+   "n": 1,
+   "min": 0.501,
+   "max": 0.501,
+   "median": 0.501,
+   "unique_values": [
+    {
+     "price_eth": 0.501,
+     "count": 1
+    }
+   ]
+  },
+  "clonex": {
+   "n": 1,
+   "min": 0.368,
+   "max": 0.368,
+   "median": 0.368,
+   "unique_values": [
+    {
+     "price_eth": 0.368,
+     "count": 1
+    }
+   ]
+  },
+  "degods-eth": {
+   "n": 0
+  },
+  "bitmappunks": {
+   "n": 0
+  }
+ }
+}

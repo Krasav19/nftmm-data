@@ -1,0 +1,2215 @@
+{
+ "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+  "short": "0x0282a26e",
+  "total_orders": 45656,
+  "offers_by_collection": {
+   "clonex": {
+    "total": 28065,
+    "trait_offer": 0,
+    "collection_offer": 28055,
+    "item_offer": 1,
+    "listing": 9
+   },
+   "lilpudgys": {
+    "total": 11427,
+    "trait_offer": 0,
+    "collection_offer": 11420,
+    "item_offer": 1,
+    "listing": 6
+   },
+   "azuki": {
+    "total": 4469,
+    "trait_offer": 0,
+    "collection_offer": 4468,
+    "item_offer": 0,
+    "listing": 1
+   },
+   "doodles-official": {
+    "total": 1689,
+    "trait_offer": 0,
+    "collection_offer": 1689,
+    "item_offer": 0,
+    "listing": 0
+   },
+   "otherside-koda": {
+    "total": 4,
+    "trait_offer": 0,
+    "collection_offer": 3,
+    "item_offer": 1,
+    "listing": 0
+   },
+   "good-vibes-club": {
+    "total": 2,
+    "trait_offer": 0,
+    "collection_offer": 2,
+    "item_offer": 0,
+    "listing": 0
+   }
+  },
+  "kind_totals": {
+   "trait_offer": 0,
+   "collection_offer": 45637,
+   "item_offer": 3,
+   "listing": 16
+  },
+  "top5_price_distribution": {
+   "clonex": {
+    "n": 28056,
+    "min": 0.242,
+    "max": 0.384,
+    "median": 0.293,
+    "unique_values": [
+     {
+      "price_eth": 0.242,
+      "count": 78
+     },
+     {
+      "price_eth": 0.243,
+      "count": 70
+     },
+     {
+      "price_eth": 0.244,
+      "count": 18
+     },
+     {
+      "price_eth": 0.245,
+      "count": 124
+     },
+     {
+      "price_eth": 0.246,
+      "count": 81
+     },
+     {
+      "price_eth": 0.247,
+      "count": 76
+     },
+     {
+      "price_eth": 0.248,
+      "count": 53
+     },
+     {
+      "price_eth": 0.249,
+      "count": 76
+     },
+     {
+      "price_eth": 0.251,
+      "count": 128
+     },
+     {
+      "price_eth": 0.252,
+      "count": 131
+     },
+     {
+      "price_eth": 0.253,
+      "count": 52
+     },
+     {
+      "price_eth": 0.254,
+      "count": 6
+     },
+     {
+      "price_eth": 0.255,
+      "count": 12
+     },
+     {
+      "price_eth": 0.256,
+      "count": 78
+     },
+     {
+      "price_eth": 0.257,
+      "count": 181
+     },
+     {
+      "price_eth": 0.258,
+      "count": 77
+     },
+     {
+      "price_eth": 0.259,
+      "count": 150
+     },
+     {
+      "price_eth": 0.26,
+      "count": 185
+     },
+     {
+      "price_eth": 0.261,
+      "count": 137
+     },
+     {
+      "price_eth": 0.262,
+      "count": 79
+     },
+     {
+      "price_eth": 0.263,
+      "count": 115
+     },
+     {
+      "price_eth": 0.264,
+      "count": 328
+     },
+     {
+      "price_eth": 0.265,
+      "count": 3
+     },
+     {
+      "price_eth": 0.266,
+      "count": 144
+     },
+     {
+      "price_eth": 0.267,
+      "count": 570
+     },
+     {
+      "price_eth": 0.268,
+      "count": 364
+     },
+     {
+      "price_eth": 0.269,
+      "count": 10
+     },
+     {
+      "price_eth": 0.27,
+      "count": 57
+     },
+     {
+      "price_eth": 0.271,
+      "count": 263
+     },
+     {
+      "price_eth": 0.272,
+      "count": 280
+     },
+     {
+      "price_eth": 0.273,
+      "count": 393
+     },
+     {
+      "price_eth": 0.274,
+      "count": 148
+     },
+     {
+      "price_eth": 0.275,
+      "count": 54
+     },
+     {
+      "price_eth": 0.276,
+      "count": 136
+     },
+     {
+      "price_eth": 0.277,
+      "count": 195
+     },
+     {
+      "price_eth": 0.278,
+      "count": 199
+     },
+     {
+      "price_eth": 0.279,
+      "count": 371
+     },
+     {
+      "price_eth": 0.28,
+      "count": 406
+     },
+     {
+      "price_eth": 0.281,
+      "count": 121
+     },
+     {
+      "price_eth": 0.282,
+      "count": 189
+     },
+     {
+      "price_eth": 0.283,
+      "count": 1066
+     },
+     {
+      "price_eth": 0.284,
+      "count": 271
+     },
+     {
+      "price_eth": 0.285,
+      "count": 162
+     },
+     {
+      "price_eth": 0.286,
+      "count": 683
+     },
+     {
+      "price_eth": 0.287,
+      "count": 542
+     },
+     {
+      "price_eth": 0.288,
+      "count": 1369
+     },
+     {
+      "price_eth": 0.289,
+      "count": 533
+     },
+     {
+      "price_eth": 0.29,
+      "count": 880
+     },
+     {
+      "price_eth": 0.291,
+      "count": 954
+     },
+     {
+      "price_eth": 0.292,
+      "count": 900
+     },
+     {
+      "price_eth": 0.293,
+      "count": 648
+     },
+     {
+      "price_eth": 0.294,
+      "count": 543
+     },
+     {
+      "price_eth": 0.295,
+      "count": 717
+     },
+     {
+      "price_eth": 0.296,
+      "count": 687
+     },
+     {
+      "price_eth": 0.297,
+      "count": 983
+     },
+     {
+      "price_eth": 0.298,
+      "count": 582
+     },
+     {
+      "price_eth": 0.299,
+      "count": 284
+     },
+     {
+      "price_eth": 0.3,
+      "count": 86
+     },
+     {
+      "price_eth": 0.301,
+      "count": 192
+     },
+     {
+      "price_eth": 0.302,
+      "count": 159
+     },
+     {
+      "price_eth": 0.303,
+      "count": 38
+     },
+     {
+      "price_eth": 0.304,
+      "count": 21
+     },
+     {
+      "price_eth": 0.305,
+      "count": 14
+     },
+     {
+      "price_eth": 0.306,
+      "count": 12
+     },
+     {
+      "price_eth": 0.307,
+      "count": 13
+     },
+     {
+      "price_eth": 0.308,
+      "count": 10
+     },
+     {
+      "price_eth": 0.309,
+      "count": 12
+     },
+     {
+      "price_eth": 0.31,
+      "count": 10
+     },
+     {
+      "price_eth": 0.311,
+      "count": 23
+     },
+     {
+      "price_eth": 0.312,
+      "count": 23
+     },
+     {
+      "price_eth": 0.313,
+      "count": 7
+     },
+     {
+      "price_eth": 0.314,
+      "count": 22
+     },
+     {
+      "price_eth": 0.315,
+      "count": 14
+     },
+     {
+      "price_eth": 0.316,
+      "count": 46
+     },
+     {
+      "price_eth": 0.317,
+      "count": 17
+     },
+     {
+      "price_eth": 0.318,
+      "count": 3
+     },
+     {
+      "price_eth": 0.319,
+      "count": 16
+     },
+     {
+      "price_eth": 0.32,
+      "count": 3
+     },
+     {
+      "price_eth": 0.321,
+      "count": 16
+     },
+     {
+      "price_eth": 0.322,
+      "count": 17
+     },
+     {
+      "price_eth": 0.323,
+      "count": 33
+     },
+     {
+      "price_eth": 0.324,
+      "count": 3
+     },
+     {
+      "price_eth": 0.325,
+      "count": 5
+     },
+     {
+      "price_eth": 0.326,
+      "count": 2
+     },
+     {
+      "price_eth": 0.327,
+      "count": 3
+     },
+     {
+      "price_eth": 0.328,
+      "count": 2
+     },
+     {
+      "price_eth": 0.329,
+      "count": 3
+     },
+     {
+      "price_eth": 0.33,
+      "count": 2
+     },
+     {
+      "price_eth": 0.331,
+      "count": 4
+     },
+     {
+      "price_eth": 0.333,
+      "count": 2
+     },
+     {
+      "price_eth": 0.334,
+      "count": 227
+     },
+     {
+      "price_eth": 0.335,
+      "count": 2066
+     },
+     {
+      "price_eth": 0.336,
+      "count": 603
+     },
+     {
+      "price_eth": 0.337,
+      "count": 888
+     },
+     {
+      "price_eth": 0.338,
+      "count": 654
+     },
+     {
+      "price_eth": 0.339,
+      "count": 973
+     },
+     {
+      "price_eth": 0.34,
+      "count": 1003
+     },
+     {
+      "price_eth": 0.341,
+      "count": 766
+     },
+     {
+      "price_eth": 0.342,
+      "count": 784
+     },
+     {
+      "price_eth": 0.343,
+      "count": 110
+     },
+     {
+      "price_eth": 0.344,
+      "count": 113
+     },
+     {
+      "price_eth": 0.345,
+      "count": 145
+     },
+     {
+      "price_eth": 0.346,
+      "count": 119
+     },
+     {
+      "price_eth": 0.347,
+      "count": 109
+     },
+     {
+      "price_eth": 0.348,
+      "count": 145
+     },
+     {
+      "price_eth": 0.349,
+      "count": 58
+     },
+     {
+      "price_eth": 0.35,
+      "count": 103
+     },
+     {
+      "price_eth": 0.351,
+      "count": 44
+     },
+     {
+      "price_eth": 0.352,
+      "count": 28
+     },
+     {
+      "price_eth": 0.353,
+      "count": 36
+     },
+     {
+      "price_eth": 0.354,
+      "count": 18
+     },
+     {
+      "price_eth": 0.355,
+      "count": 21
+     },
+     {
+      "price_eth": 0.356,
+      "count": 24
+     },
+     {
+      "price_eth": 0.357,
+      "count": 32
+     },
+     {
+      "price_eth": 0.358,
+      "count": 17
+     },
+     {
+      "price_eth": 0.359,
+      "count": 38
+     },
+     {
+      "price_eth": 0.36,
+      "count": 13
+     },
+     {
+      "price_eth": 0.361,
+      "count": 71
+     },
+     {
+      "price_eth": 0.362,
+      "count": 9
+     },
+     {
+      "price_eth": 0.363,
+      "count": 10
+     },
+     {
+      "price_eth": 0.364,
+      "count": 7
+     },
+     {
+      "price_eth": 0.365,
+      "count": 4
+     },
+     {
+      "price_eth": 0.366,
+      "count": 1
+     },
+     {
+      "price_eth": 0.367,
+      "count": 4
+     },
+     {
+      "price_eth": 0.368,
+      "count": 2
+     },
+     {
+      "price_eth": 0.369,
+      "count": 4
+     },
+     {
+      "price_eth": 0.37,
+      "count": 1
+     },
+     {
+      "price_eth": 0.371,
+      "count": 5
+     },
+     {
+      "price_eth": 0.372,
+      "count": 1
+     },
+     {
+      "price_eth": 0.373,
+      "count": 3
+     },
+     {
+      "price_eth": 0.374,
+      "count": 1
+     },
+     {
+      "price_eth": 0.375,
+      "count": 3
+     },
+     {
+      "price_eth": 0.376,
+      "count": 1
+     },
+     {
+      "price_eth": 0.377,
+      "count": 3
+     },
+     {
+      "price_eth": 0.378,
+      "count": 1
+     },
+     {
+      "price_eth": 0.379,
+      "count": 3
+     },
+     {
+      "price_eth": 0.38,
+      "count": 1
+     },
+     {
+      "price_eth": 0.381,
+      "count": 3
+     },
+     {
+      "price_eth": 0.382,
+      "count": 3
+     },
+     {
+      "price_eth": 0.383,
+      "count": 1
+     },
+     {
+      "price_eth": 0.384,
+      "count": 2
+     }
+    ]
+   },
+   "lilpudgys": {
+    "n": 11421,
+    "min": 0.421,
+    "max": 0.828,
+    "median": 0.446,
+    "unique_values": [
+     {
+      "price_eth": 0.421,
+      "count": 118
+     },
+     {
+      "price_eth": 0.422,
+      "count": 136
+     },
+     {
+      "price_eth": 0.423,
+      "count": 138
+     },
+     {
+      "price_eth": 0.424,
+      "count": 313
+     },
+     {
+      "price_eth": 0.425,
+      "count": 46
+     },
+     {
+      "price_eth": 0.426,
+      "count": 233
+     },
+     {
+      "price_eth": 0.427,
+      "count": 220
+     },
+     {
+      "price_eth": 0.428,
+      "count": 101
+     },
+     {
+      "price_eth": 0.429,
+      "count": 58
+     },
+     {
+      "price_eth": 0.43,
+      "count": 86
+     },
+     {
+      "price_eth": 0.431,
+      "count": 34
+     },
+     {
+      "price_eth": 0.432,
+      "count": 57
+     },
+     {
+      "price_eth": 0.433,
+      "count": 34
+     },
+     {
+      "price_eth": 0.434,
+      "count": 113
+     },
+     {
+      "price_eth": 0.435,
+      "count": 74
+     },
+     {
+      "price_eth": 0.436,
+      "count": 76
+     },
+     {
+      "price_eth": 0.437,
+      "count": 147
+     },
+     {
+      "price_eth": 0.438,
+      "count": 326
+     },
+     {
+      "price_eth": 0.439,
+      "count": 526
+     },
+     {
+      "price_eth": 0.44,
+      "count": 558
+     },
+     {
+      "price_eth": 0.441,
+      "count": 548
+     },
+     {
+      "price_eth": 0.442,
+      "count": 70
+     },
+     {
+      "price_eth": 0.443,
+      "count": 47
+     },
+     {
+      "price_eth": 0.444,
+      "count": 441
+     },
+     {
+      "price_eth": 0.445,
+      "count": 1186
+     },
+     {
+      "price_eth": 0.446,
+      "count": 338
+     },
+     {
+      "price_eth": 0.447,
+      "count": 495
+     },
+     {
+      "price_eth": 0.448,
+      "count": 217
+     },
+     {
+      "price_eth": 0.449,
+      "count": 404
+     },
+     {
+      "price_eth": 0.45,
+      "count": 158
+     },
+     {
+      "price_eth": 0.451,
+      "count": 77
+     },
+     {
+      "price_eth": 0.452,
+      "count": 280
+     },
+     {
+      "price_eth": 0.453,
+      "count": 86
+     },
+     {
+      "price_eth": 0.454,
+      "count": 208
+     },
+     {
+      "price_eth": 0.455,
+      "count": 235
+     },
+     {
+      "price_eth": 0.456,
+      "count": 496
+     },
+     {
+      "price_eth": 0.457,
+      "count": 365
+     },
+     {
+      "price_eth": 0.458,
+      "count": 352
+     },
+     {
+      "price_eth": 0.459,
+      "count": 66
+     },
+     {
+      "price_eth": 0.46,
+      "count": 303
+     },
+     {
+      "price_eth": 0.461,
+      "count": 1065
+     },
+     {
+      "price_eth": 0.462,
+      "count": 20
+     },
+     {
+      "price_eth": 0.463,
+      "count": 26
+     },
+     {
+      "price_eth": 0.464,
+      "count": 22
+     },
+     {
+      "price_eth": 0.465,
+      "count": 91
+     },
+     {
+      "price_eth": 0.466,
+      "count": 6
+     },
+     {
+      "price_eth": 0.467,
+      "count": 50
+     },
+     {
+      "price_eth": 0.468,
+      "count": 20
+     },
+     {
+      "price_eth": 0.469,
+      "count": 24
+     },
+     {
+      "price_eth": 0.47,
+      "count": 19
+     },
+     {
+      "price_eth": 0.471,
+      "count": 10
+     },
+     {
+      "price_eth": 0.472,
+      "count": 19
+     },
+     {
+      "price_eth": 0.473,
+      "count": 8
+     },
+     {
+      "price_eth": 0.474,
+      "count": 5
+     },
+     {
+      "price_eth": 0.475,
+      "count": 36
+     },
+     {
+      "price_eth": 0.476,
+      "count": 4
+     },
+     {
+      "price_eth": 0.477,
+      "count": 11
+     },
+     {
+      "price_eth": 0.478,
+      "count": 13
+     },
+     {
+      "price_eth": 0.479,
+      "count": 4
+     },
+     {
+      "price_eth": 0.48,
+      "count": 15
+     },
+     {
+      "price_eth": 0.481,
+      "count": 44
+     },
+     {
+      "price_eth": 0.482,
+      "count": 3
+     },
+     {
+      "price_eth": 0.483,
+      "count": 15
+     },
+     {
+      "price_eth": 0.484,
+      "count": 2
+     },
+     {
+      "price_eth": 0.485,
+      "count": 16
+     },
+     {
+      "price_eth": 0.486,
+      "count": 21
+     },
+     {
+      "price_eth": 0.487,
+      "count": 4
+     },
+     {
+      "price_eth": 0.488,
+      "count": 15
+     },
+     {
+      "price_eth": 0.489,
+      "count": 6
+     },
+     {
+      "price_eth": 0.49,
+      "count": 10
+     },
+     {
+      "price_eth": 0.491,
+      "count": 9
+     },
+     {
+      "price_eth": 0.492,
+      "count": 2
+     },
+     {
+      "price_eth": 0.493,
+      "count": 1
+     },
+     {
+      "price_eth": 0.494,
+      "count": 2
+     },
+     {
+      "price_eth": 0.496,
+      "count": 2
+     },
+     {
+      "price_eth": 0.497,
+      "count": 1
+     },
+     {
+      "price_eth": 0.498,
+      "count": 1
+     },
+     {
+      "price_eth": 0.501,
+      "count": 1
+     },
+     {
+      "price_eth": 0.575,
+      "count": 2
+     },
+     {
+      "price_eth": 0.797,
+      "count": 15
+     },
+     {
+      "price_eth": 0.828,
+      "count": 15
+     }
+    ]
+   },
+   "azuki": {
+    "n": 4468,
+    "min": 0.742,
+    "max": 0.811,
+    "median": 0.782,
+    "unique_values": [
+     {
+      "price_eth": 0.742,
+      "count": 14
+     },
+     {
+      "price_eth": 0.743,
+      "count": 64
+     },
+     {
+      "price_eth": 0.748,
+      "count": 3
+     },
+     {
+      "price_eth": 0.751,
+      "count": 215
+     },
+     {
+      "price_eth": 0.753,
+      "count": 30
+     },
+     {
+      "price_eth": 0.761,
+      "count": 441
+     },
+     {
+      "price_eth": 0.762,
+      "count": 234
+     },
+     {
+      "price_eth": 0.763,
+      "count": 98
+     },
+     {
+      "price_eth": 0.764,
+      "count": 88
+     },
+     {
+      "price_eth": 0.765,
+      "count": 169
+     },
+     {
+      "price_eth": 0.766,
+      "count": 176
+     },
+     {
+      "price_eth": 0.768,
+      "count": 1
+     },
+     {
+      "price_eth": 0.771,
+      "count": 108
+     },
+     {
+      "price_eth": 0.772,
+      "count": 14
+     },
+     {
+      "price_eth": 0.774,
+      "count": 109
+     },
+     {
+      "price_eth": 0.775,
+      "count": 1
+     },
+     {
+      "price_eth": 0.776,
+      "count": 76
+     },
+     {
+      "price_eth": 0.777,
+      "count": 22
+     },
+     {
+      "price_eth": 0.778,
+      "count": 35
+     },
+     {
+      "price_eth": 0.779,
+      "count": 34
+     },
+     {
+      "price_eth": 0.78,
+      "count": 55
+     },
+     {
+      "price_eth": 0.781,
+      "count": 245
+     },
+     {
+      "price_eth": 0.782,
+      "count": 329
+     },
+     {
+      "price_eth": 0.783,
+      "count": 96
+     },
+     {
+      "price_eth": 0.784,
+      "count": 67
+     },
+     {
+      "price_eth": 0.785,
+      "count": 123
+     },
+     {
+      "price_eth": 0.786,
+      "count": 190
+     },
+     {
+      "price_eth": 0.787,
+      "count": 595
+     },
+     {
+      "price_eth": 0.788,
+      "count": 138
+     },
+     {
+      "price_eth": 0.789,
+      "count": 7
+     },
+     {
+      "price_eth": 0.79,
+      "count": 12
+     },
+     {
+      "price_eth": 0.791,
+      "count": 114
+     },
+     {
+      "price_eth": 0.792,
+      "count": 36
+     },
+     {
+      "price_eth": 0.793,
+      "count": 35
+     },
+     {
+      "price_eth": 0.794,
+      "count": 22
+     },
+     {
+      "price_eth": 0.795,
+      "count": 50
+     },
+     {
+      "price_eth": 0.796,
+      "count": 37
+     },
+     {
+      "price_eth": 0.797,
+      "count": 73
+     },
+     {
+      "price_eth": 0.798,
+      "count": 53
+     },
+     {
+      "price_eth": 0.799,
+      "count": 16
+     },
+     {
+      "price_eth": 0.8,
+      "count": 34
+     },
+     {
+      "price_eth": 0.801,
+      "count": 64
+     },
+     {
+      "price_eth": 0.802,
+      "count": 37
+     },
+     {
+      "price_eth": 0.803,
+      "count": 33
+     },
+     {
+      "price_eth": 0.804,
+      "count": 1
+     },
+     {
+      "price_eth": 0.806,
+      "count": 9
+     },
+     {
+      "price_eth": 0.807,
+      "count": 31
+     },
+     {
+      "price_eth": 0.81,
+      "count": 12
+     },
+     {
+      "price_eth": 0.811,
+      "count": 22
+     }
+    ]
+   },
+   "doodles-official": {
+    "n": 1689,
+    "min": 0.47,
+    "max": 0.548,
+    "median": 0.481,
+    "unique_values": [
+     {
+      "price_eth": 0.47,
+      "count": 2
+     },
+     {
+      "price_eth": 0.472,
+      "count": 86
+     },
+     {
+      "price_eth": 0.473,
+      "count": 114
+     },
+     {
+      "price_eth": 0.474,
+      "count": 50
+     },
+     {
+      "price_eth": 0.475,
+      "count": 125
+     },
+     {
+      "price_eth": 0.476,
+      "count": 98
+     },
+     {
+      "price_eth": 0.477,
+      "count": 132
+     },
+     {
+      "price_eth": 0.478,
+      "count": 61
+     },
+     {
+      "price_eth": 0.479,
+      "count": 55
+     },
+     {
+      "price_eth": 0.48,
+      "count": 64
+     },
+     {
+      "price_eth": 0.481,
+      "count": 67
+     },
+     {
+      "price_eth": 0.482,
+      "count": 74
+     },
+     {
+      "price_eth": 0.483,
+      "count": 52
+     },
+     {
+      "price_eth": 0.484,
+      "count": 65
+     },
+     {
+      "price_eth": 0.485,
+      "count": 50
+     },
+     {
+      "price_eth": 0.486,
+      "count": 22
+     },
+     {
+      "price_eth": 0.487,
+      "count": 54
+     },
+     {
+      "price_eth": 0.488,
+      "count": 19
+     },
+     {
+      "price_eth": 0.489,
+      "count": 47
+     },
+     {
+      "price_eth": 0.49,
+      "count": 13
+     },
+     {
+      "price_eth": 0.491,
+      "count": 188
+     },
+     {
+      "price_eth": 0.492,
+      "count": 21
+     },
+     {
+      "price_eth": 0.493,
+      "count": 33
+     },
+     {
+      "price_eth": 0.494,
+      "count": 10
+     },
+     {
+      "price_eth": 0.495,
+      "count": 4
+     },
+     {
+      "price_eth": 0.496,
+      "count": 8
+     },
+     {
+      "price_eth": 0.497,
+      "count": 1
+     },
+     {
+      "price_eth": 0.498,
+      "count": 8
+     },
+     {
+      "price_eth": 0.499,
+      "count": 1
+     },
+     {
+      "price_eth": 0.5,
+      "count": 9
+     },
+     {
+      "price_eth": 0.501,
+      "count": 7
+     },
+     {
+      "price_eth": 0.502,
+      "count": 4
+     },
+     {
+      "price_eth": 0.503,
+      "count": 1
+     },
+     {
+      "price_eth": 0.504,
+      "count": 4
+     },
+     {
+      "price_eth": 0.505,
+      "count": 1
+     },
+     {
+      "price_eth": 0.506,
+      "count": 4
+     },
+     {
+      "price_eth": 0.507,
+      "count": 1
+     },
+     {
+      "price_eth": 0.508,
+      "count": 1
+     },
+     {
+      "price_eth": 0.509,
+      "count": 1
+     },
+     {
+      "price_eth": 0.51,
+      "count": 1
+     },
+     {
+      "price_eth": 0.511,
+      "count": 1
+     },
+     {
+      "price_eth": 0.512,
+      "count": 2
+     },
+     {
+      "price_eth": 0.513,
+      "count": 1
+     },
+     {
+      "price_eth": 0.514,
+      "count": 4
+     },
+     {
+      "price_eth": 0.516,
+      "count": 5
+     },
+     {
+      "price_eth": 0.517,
+      "count": 40
+     },
+     {
+      "price_eth": 0.518,
+      "count": 5
+     },
+     {
+      "price_eth": 0.519,
+      "count": 6
+     },
+     {
+      "price_eth": 0.52,
+      "count": 2
+     },
+     {
+      "price_eth": 0.521,
+      "count": 3
+     },
+     {
+      "price_eth": 0.522,
+      "count": 4
+     },
+     {
+      "price_eth": 0.523,
+      "count": 1
+     },
+     {
+      "price_eth": 0.524,
+      "count": 4
+     },
+     {
+      "price_eth": 0.525,
+      "count": 9
+     },
+     {
+      "price_eth": 0.526,
+      "count": 3
+     },
+     {
+      "price_eth": 0.527,
+      "count": 5
+     },
+     {
+      "price_eth": 0.529,
+      "count": 5
+     },
+     {
+      "price_eth": 0.531,
+      "count": 5
+     },
+     {
+      "price_eth": 0.533,
+      "count": 3
+     },
+     {
+      "price_eth": 0.535,
+      "count": 4
+     },
+     {
+      "price_eth": 0.538,
+      "count": 5
+     },
+     {
+      "price_eth": 0.54,
+      "count": 3
+     },
+     {
+      "price_eth": 0.542,
+      "count": 3
+     },
+     {
+      "price_eth": 0.544,
+      "count": 3
+     },
+     {
+      "price_eth": 0.546,
+      "count": 3
+     },
+     {
+      "price_eth": 0.548,
+      "count": 2
+     }
+    ]
+   },
+   "otherside-koda": {
+    "n": 4,
+    "min": 0.653,
+    "max": 0.679,
+    "median": 0.667,
+    "unique_values": [
+     {
+      "price_eth": 0.653,
+      "count": 1
+     },
+     {
+      "price_eth": 0.663,
+      "count": 1
+     },
+     {
+      "price_eth": 0.671,
+      "count": 1
+     },
+     {
+      "price_eth": 0.679,
+      "count": 1
+     }
+    ]
+   }
+  },
+  "offers_per_hour_utc_last3d": {
+   "0": 2057,
+   "1": 2000,
+   "2": 2183,
+   "3": 1939,
+   "4": 1452,
+   "5": 1526,
+   "6": 1442,
+   "7": 1527,
+   "8": 1838,
+   "9": 1626,
+   "10": 1979,
+   "11": 1997,
+   "12": 1879,
+   "13": 2318,
+   "14": 2087,
+   "15": 1918,
+   "16": 1916,
+   "17": 1840,
+   "18": 1963,
+   "19": 1793,
+   "20": 1721,
+   "21": 2315,
+   "22": 1858,
+   "23": 2466
+  },
+  "recent_offer_count_3d": 45640,
+  "inter_offer_interval_sec": {
+   "count": 45639,
+   "median": 1.0,
+   "p10": 0.0,
+   "p90": 11.0
+  }
+ },
+ "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+  "short": "0x400fe3cf",
+  "total_orders": 76761,
+  "offers_by_collection": {
+   "pudgypenguins": {
+    "total": 76749,
+    "trait_offer": 0,
+    "collection_offer": 0,
+    "item_offer": 76744,
+    "listing": 5
+   },
+   "lilpudgys": {
+    "total": 6,
+    "trait_offer": 0,
+    "collection_offer": 0,
+    "item_offer": 0,
+    "listing": 6
+   },
+   "otherside-koda": {
+    "total": 3,
+    "trait_offer": 0,
+    "collection_offer": 1,
+    "item_offer": 0,
+    "listing": 2
+   },
+   "good-vibes-club": {
+    "total": 2,
+    "trait_offer": 0,
+    "collection_offer": 1,
+    "item_offer": 0,
+    "listing": 1
+   },
+   "clonex": {
+    "total": 1,
+    "trait_offer": 0,
+    "collection_offer": 0,
+    "item_offer": 0,
+    "listing": 1
+   }
+  },
+  "kind_totals": {
+   "trait_offer": 0,
+   "collection_offer": 2,
+   "item_offer": 76744,
+   "listing": 15
+  },
+  "top5_price_distribution": {
+   "pudgypenguins": {
+    "n": 76744,
+    "min": 3.44,
+    "max": 5.53,
+    "median": 4.44,
+    "unique_values": [
+     {
+      "price_eth": 3.44,
+      "count": 1
+     },
+     {
+      "price_eth": 3.75,
+      "count": 1
+     },
+     {
+      "price_eth": 3.85,
+      "count": 2
+     },
+     {
+      "price_eth": 3.86,
+      "count": 4
+     },
+     {
+      "price_eth": 3.87,
+      "count": 1
+     },
+     {
+      "price_eth": 3.94,
+      "count": 1
+     },
+     {
+      "price_eth": 4.03,
+      "count": 2
+     },
+     {
+      "price_eth": 4.05,
+      "count": 1
+     },
+     {
+      "price_eth": 4.08,
+      "count": 1
+     },
+     {
+      "price_eth": 4.09,
+      "count": 5
+     },
+     {
+      "price_eth": 4.1,
+      "count": 16
+     },
+     {
+      "price_eth": 4.11,
+      "count": 18
+     },
+     {
+      "price_eth": 4.12,
+      "count": 20
+     },
+     {
+      "price_eth": 4.13,
+      "count": 428
+     },
+     {
+      "price_eth": 4.14,
+      "count": 652
+     },
+     {
+      "price_eth": 4.15,
+      "count": 400
+     },
+     {
+      "price_eth": 4.16,
+      "count": 1329
+     },
+     {
+      "price_eth": 4.17,
+      "count": 1177
+     },
+     {
+      "price_eth": 4.18,
+      "count": 580
+     },
+     {
+      "price_eth": 4.19,
+      "count": 1049
+     },
+     {
+      "price_eth": 4.2,
+      "count": 1050
+     },
+     {
+      "price_eth": 4.21,
+      "count": 1898
+     },
+     {
+      "price_eth": 4.22,
+      "count": 1454
+     },
+     {
+      "price_eth": 4.23,
+      "count": 1465
+     },
+     {
+      "price_eth": 4.24,
+      "count": 1533
+     },
+     {
+      "price_eth": 4.25,
+      "count": 1924
+     },
+     {
+      "price_eth": 4.26,
+      "count": 1254
+     },
+     {
+      "price_eth": 4.27,
+      "count": 1153
+     },
+     {
+      "price_eth": 4.28,
+      "count": 1211
+     },
+     {
+      "price_eth": 4.29,
+      "count": 789
+     },
+     {
+      "price_eth": 4.3,
+      "count": 1726
+     },
+     {
+      "price_eth": 4.31,
+      "count": 1356
+     },
+     {
+      "price_eth": 4.32,
+      "count": 1549
+     },
+     {
+      "price_eth": 4.33,
+      "count": 1034
+     },
+     {
+      "price_eth": 4.34,
+      "count": 1006
+     },
+     {
+      "price_eth": 4.35,
+      "count": 1124
+     },
+     {
+      "price_eth": 4.36,
+      "count": 1205
+     },
+     {
+      "price_eth": 4.37,
+      "count": 704
+     },
+     {
+      "price_eth": 4.38,
+      "count": 1414
+     },
+     {
+      "price_eth": 4.39,
+      "count": 1062
+     },
+     {
+      "price_eth": 4.4,
+      "count": 3022
+     },
+     {
+      "price_eth": 4.41,
+      "count": 1120
+     },
+     {
+      "price_eth": 4.42,
+      "count": 824
+     },
+     {
+      "price_eth": 4.43,
+      "count": 1192
+     },
+     {
+      "price_eth": 4.44,
+      "count": 1089
+     },
+     {
+      "price_eth": 4.45,
+      "count": 1013
+     },
+     {
+      "price_eth": 4.46,
+      "count": 650
+     },
+     {
+      "price_eth": 4.47,
+      "count": 765
+     },
+     {
+      "price_eth": 4.48,
+      "count": 924
+     },
+     {
+      "price_eth": 4.49,
+      "count": 1239
+     },
+     {
+      "price_eth": 4.5,
+      "count": 767
+     },
+     {
+      "price_eth": 4.51,
+      "count": 1325
+     },
+     {
+      "price_eth": 4.52,
+      "count": 649
+     },
+     {
+      "price_eth": 4.53,
+      "count": 804
+     },
+     {
+      "price_eth": 4.54,
+      "count": 676
+     },
+     {
+      "price_eth": 4.55,
+      "count": 875
+     },
+     {
+      "price_eth": 4.56,
+      "count": 715
+     },
+     {
+      "price_eth": 4.57,
+      "count": 590
+     },
+     {
+      "price_eth": 4.58,
+      "count": 605
+     },
+     {
+      "price_eth": 4.59,
+      "count": 611
+     },
+     {
+      "price_eth": 4.6,
+      "count": 781
+     },
+     {
+      "price_eth": 4.61,
+      "count": 596
+     },
+     {
+      "price_eth": 4.62,
+      "count": 565
+     },
+     {
+      "price_eth": 4.63,
+      "count": 533
+     },
+     {
+      "price_eth": 4.64,
+      "count": 567
+     },
+     {
+      "price_eth": 4.65,
+      "count": 679
+     },
+     {
+      "price_eth": 4.66,
+      "count": 487
+     },
+     {
+      "price_eth": 4.67,
+      "count": 423
+     },
+     {
+      "price_eth": 4.68,
+      "count": 371
+     },
+     {
+      "price_eth": 4.69,
+      "count": 596
+     },
+     {
+      "price_eth": 4.7,
+      "count": 818
+     },
+     {
+      "price_eth": 4.71,
+      "count": 512
+     },
+     {
+      "price_eth": 4.72,
+      "count": 843
+     },
+     {
+      "price_eth": 4.73,
+      "count": 504
+     },
+     {
+      "price_eth": 4.74,
+      "count": 522
+     },
+     {
+      "price_eth": 4.75,
+      "count": 444
+     },
+     {
+      "price_eth": 4.76,
+      "count": 602
+     },
+     {
+      "price_eth": 4.77,
+      "count": 715
+     },
+     {
+      "price_eth": 4.78,
+      "count": 478
+     },
+     {
+      "price_eth": 4.79,
+      "count": 471
+     },
+     {
+      "price_eth": 4.8,
+      "count": 459
+     },
+     {
+      "price_eth": 4.81,
+      "count": 562
+     },
+     {
+      "price_eth": 4.82,
+      "count": 486
+     },
+     {
+      "price_eth": 4.83,
+      "count": 490
+     },
+     {
+      "price_eth": 4.84,
+      "count": 502
+     },
+     {
+      "price_eth": 4.85,
+      "count": 567
+     },
+     {
+      "price_eth": 4.86,
+      "count": 391
+     },
+     {
+      "price_eth": 4.87,
+      "count": 492
+     },
+     {
+      "price_eth": 4.88,
+      "count": 391
+     },
+     {
+      "price_eth": 4.89,
+      "count": 303
+     },
+     {
+      "price_eth": 4.9,
+      "count": 437
+     },
+     {
+      "price_eth": 4.91,
+      "count": 359
+     },
+     {
+      "price_eth": 4.92,
+      "count": 490
+     },
+     {
+      "price_eth": 4.93,
+      "count": 426
+     },
+     {
+      "price_eth": 4.94,
+      "count": 341
+     },
+     {
+      "price_eth": 4.95,
+      "count": 427
+     },
+     {
+      "price_eth": 4.96,
+      "count": 330
+     },
+     {
+      "price_eth": 4.97,
+      "count": 351
+     },
+     {
+      "price_eth": 4.98,
+      "count": 462
+     },
+     {
+      "price_eth": 4.99,
+      "count": 332
+     },
+     {
+      "price_eth": 5.0,
+      "count": 226
+     },
+     {
+      "price_eth": 5.01,
+      "count": 356
+     },
+     {
+      "price_eth": 5.02,
+      "count": 163
+     },
+     {
+      "price_eth": 5.03,
+      "count": 222
+     },
+     {
+      "price_eth": 5.04,
+      "count": 268
+     },
+     {
+      "price_eth": 5.05,
+      "count": 282
+     },
+     {
+      "price_eth": 5.06,
+      "count": 120
+     },
+     {
+      "price_eth": 5.07,
+      "count": 257
+     },
+     {
+      "price_eth": 5.08,
+      "count": 222
+     },
+     {
+      "price_eth": 5.09,
+      "count": 200
+     },
+     {
+      "price_eth": 5.1,
+      "count": 92
+     },
+     {
+      "price_eth": 5.11,
+      "count": 124
+     },
+     {
+      "price_eth": 5.12,
+      "count": 199
+     },
+     {
+      "price_eth": 5.13,
+      "count": 138
+     },
+     {
+      "price_eth": 5.14,
+      "count": 302
+     },
+     {
+      "price_eth": 5.15,
+      "count": 214
+     },
+     {
+      "price_eth": 5.16,
+      "count": 131
+     },
+     {
+      "price_eth": 5.17,
+      "count": 318
+     },
+     {
+      "price_eth": 5.18,
+      "count": 171
+     },
+     {
+      "price_eth": 5.19,
+      "count": 205
+     },
+     {
+      "price_eth": 5.2,
+      "count": 131
+     },
+     {
+      "price_eth": 5.21,
+      "count": 176
+     },
+     {
+      "price_eth": 5.22,
+      "count": 228
+     },
+     {
+      "price_eth": 5.23,
+      "count": 20
+     },
+     {
+      "price_eth": 5.24,
+      "count": 30
+     },
+     {
+      "price_eth": 5.25,
+      "count": 44
+     },
+     {
+      "price_eth": 5.26,
+      "count": 33
+     },
+     {
+      "price_eth": 5.27,
+      "count": 60
+     },
+     {
+      "price_eth": 5.28,
+      "count": 112
+     },
+     {
+      "price_eth": 5.29,
+      "count": 78
+     },
+     {
+      "price_eth": 5.3,
+      "count": 63
+     },
+     {
+      "price_eth": 5.31,
+      "count": 101
+     },
+     {
+      "price_eth": 5.32,
+      "count": 60
+     },
+     {
+      "price_eth": 5.33,
+      "count": 13
+     },
+     {
+      "price_eth": 5.34,
+      "count": 31
+     },
+     {
+      "price_eth": 5.35,
+      "count": 18
+     },
+     {
+      "price_eth": 5.36,
+      "count": 23
+     },
+     {
+      "price_eth": 5.37,
+      "count": 14
+     },
+     {
+      "price_eth": 5.38,
+      "count": 35
+     },
+     {
+      "price_eth": 5.39,
+      "count": 6
+     },
+     {
+      "price_eth": 5.4,
+      "count": 4
+     },
+     {
+      "price_eth": 5.41,
+      "count": 20
+     },
+     {
+      "price_eth": 5.42,
+      "count": 5
+     },
+     {
+      "price_eth": 5.43,
+      "count": 3
+     },
+     {
+      "price_eth": 5.44,
+      "count": 13
+     },
+     {
+      "price_eth": 5.48,
+      "count": 8
+     },
+     {
+      "price_eth": 5.49,
+      "count": 7
+     },
+     {
+      "price_eth": 5.5,
+      "count": 8
+     },
+     {
+      "price_eth": 5.52,
+      "count": 15
+     },
+     {
+      "price_eth": 5.53,
+      "count": 16
+     }
+    ]
+   },
+   "lilpudgys": {
+    "n": 0
+   },
+   "otherside-koda": {
+    "n": 1,
+    "min": 0.669,
+    "max": 0.669,
+    "median": 0.669,
+    "unique_values": [
+     {
+      "price_eth": 0.669,
+      "count": 1
+     }
+    ]
+   },
+   "good-vibes-club": {
+    "n": 1,
+    "min": 0.439,
+    "max": 0.439,
+    "median": 0.439,
+    "unique_values": [
+     {
+      "price_eth": 0.439,
+      "count": 1
+     }
+    ]
+   },
+   "clonex": {
+    "n": 0
+   }
+  },
+  "offers_per_hour_utc_last3d": {
+   "0": 4576,
+   "1": 2911,
+   "2": 2254,
+   "3": 1873,
+   "4": 2048,
+   "5": 2528,
+   "6": 3447,
+   "7": 2999,
+   "8": 2486,
+   "9": 5208,
+   "10": 3836,
+   "11": 3162,
+   "12": 3233,
+   "13": 2638,
+   "14": 2785,
+   "15": 3525,
+   "16": 3253,
+   "17": 2380,
+   "18": 5474,
+   "19": 4216,
+   "20": 3771,
+   "21": 3944,
+   "22": 2300,
+   "23": 1899
+  },
+  "recent_offer_count_3d": 76746,
+  "inter_offer_interval_sec": {
+   "count": 76745,
+   "median": 2.0,
+   "p10": 0.0,
+   "p90": 6.0
+  }
+ }
+}
