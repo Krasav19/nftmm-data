@@ -9,8 +9,9 @@
     "transfer": 1000
    },
    "offer_kinds": {
-    "collection_offer": 45637,
+    "trait_offer": 45632,
     "listing": 16,
+    "collection_offer": 5,
     "item_offer": 3
    },
    "buy_sell": {
@@ -627,13 +628,17 @@
    "count": 76747,
    "share": 0.6269
   },
-  "collection_offer": {
-   "count": 45639,
+  "trait_offer": {
+   "count": 45632,
    "share": 0.3728
   },
   "listing": {
    "count": 31,
    "share": 0.0003
+  },
+  "collection_offer": {
+   "count": 7,
+   "share": 0.0001
   }
  },
  "top5_bid_price_distribution": {

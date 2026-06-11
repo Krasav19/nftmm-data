@@ -5,50 +5,38 @@
   "offers_by_collection": {
    "clonex": {
     "total": 28065,
-    "trait_offer": 0,
-    "collection_offer": 28055,
-    "item_offer": 1,
-    "listing": 9
+    "trait_offer": 28055,
+    "listing": 9,
+    "item_offer": 1
    },
    "lilpudgys": {
     "total": 11427,
-    "trait_offer": 0,
-    "collection_offer": 11420,
-    "item_offer": 1,
-    "listing": 6
+    "trait_offer": 11420,
+    "listing": 6,
+    "item_offer": 1
    },
    "azuki": {
     "total": 4469,
-    "trait_offer": 0,
-    "collection_offer": 4468,
-    "item_offer": 0,
+    "trait_offer": 4468,
     "listing": 1
    },
    "doodles-official": {
     "total": 1689,
-    "trait_offer": 0,
-    "collection_offer": 1689,
-    "item_offer": 0,
-    "listing": 0
+    "trait_offer": 1689
    },
    "otherside-koda": {
     "total": 4,
-    "trait_offer": 0,
-    "collection_offer": 3,
     "item_offer": 1,
-    "listing": 0
+    "collection_offer": 3
    },
    "good-vibes-club": {
     "total": 2,
-    "trait_offer": 0,
-    "collection_offer": 2,
-    "item_offer": 0,
-    "listing": 0
+    "collection_offer": 2
    }
   },
   "kind_totals": {
-   "trait_offer": 0,
-   "collection_offer": 45637,
+   "trait_offer": 45632,
+   "collection_offer": 5,
    "item_offer": 3,
    "listing": 16
   },
@@ -1498,37 +1486,25 @@
   "offers_by_collection": {
    "pudgypenguins": {
     "total": 76749,
-    "trait_offer": 0,
-    "collection_offer": 0,
     "item_offer": 76744,
     "listing": 5
    },
    "lilpudgys": {
     "total": 6,
-    "trait_offer": 0,
-    "collection_offer": 0,
-    "item_offer": 0,
     "listing": 6
    },
    "otherside-koda": {
     "total": 3,
-    "trait_offer": 0,
     "collection_offer": 1,
-    "item_offer": 0,
     "listing": 2
    },
    "good-vibes-club": {
     "total": 2,
-    "trait_offer": 0,
     "collection_offer": 1,
-    "item_offer": 0,
     "listing": 1
    },
    "clonex": {
     "total": 1,
-    "trait_offer": 0,
-    "collection_offer": 0,
-    "item_offer": 0,
     "listing": 1
    }
   },

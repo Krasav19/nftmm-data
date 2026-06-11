@@ -162,22 +162,27 @@ def bid_price(e):
 
 
 def offer_subtype(e):
-    """Classify an order event as trait / collection / item offer, or listing."""
+    """Classify an order event as trait / collection / item offer, or listing.
+
+    The trait criterion is in criteria.traits (a LIST), not criteria.trait.
+    A trait offer therefore has a non-empty traits/numeric_traits list.
+    """
     ot = e.get("order_type", "")
     if ot == "listing":
         return "listing"
     crit = e.get("criteria") or {}
-    if crit.get("trait"):
+    if crit.get("traits") or crit.get("numeric_traits"):
         return "trait_offer"
     enc = crit.get("encoded_token_ids")
-    # collection-wide offer: criteria has collection but no specific token / trait
-    if crit.get("collection") and (not enc or enc == "*") and not crit.get("trait"):
+    # collection-wide offer: criteria has a collection but no trait
+    if crit.get("collection") and (not enc or enc == "*"):
         return "collection_offer"
-    if ot in ("collection_offer",):
+    if crit.get("collection") and enc:
         return "collection_offer"
-    if ot in ("trait_offer",):
+    if ot == "collection_offer":
+        return "collection_offer"
+    if ot == "trait_offer":
         return "trait_offer"
-    # else item-level offer
     return "item_offer"
 
 

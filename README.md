@@ -7,9 +7,18 @@ running three Ethereum addresses — for analysis. Sourced from the **OpenSea AP
 
 | address | role |
 |---|---|
-| `0x028296d8bf1995549d5b9446622cf565bbd0a26e` | collection-offer bot (high-frequency bidder) |
+| `0x028296d8bf1995549d5b9446622cf565bbd0a26e` | **trait-offer bot** (bids by rarity trait) |
 | `0x400f2bd92098c386cea677d6e7f832eb25c6e3cf` | item-offer bot (per-token bidder) |
 | `0x8e8d6246c45d0e7f68172e85573546d90fc2e062` | two-sided trader, idle since 2026-04-27 |
+
+> **Trait-criteria correction (2026-06-11):** the first pass mislabeled
+> `0x0282`'s 45k offers as collection-wide offers. They are in fact **trait
+> offers** — the criterion lives in `criteria.traits` (a list) in the API
+> wrapper and as a Seaport `consideration` item with `itemType 4` (a merkle
+> root over the eligible token set). `snapshot.py` now stores the whole
+> `criteria` object verbatim (plus the item-offer `asset` token id), and
+> `discover.py` classifies trait vs collection vs item correctly. See
+> `export/trait_analysis.md`.
 
 ## Collection window
 

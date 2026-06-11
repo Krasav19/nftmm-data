@@ -1,0 +1,419 @@
+{
+ "snapshots": [
+  "snap_2026-06-11T10-30-01Z.json",
+  "snap_2026-06-11T10-35-22Z.json",
+  "snap_2026-06-11T10-45-01Z.json"
+ ],
+ "trait_bid_tables": {
+  "lilpudgys": {
+   "floor_median": 0.474,
+   "top15": [
+    {
+     "trait": "Body=Kimono Ice",
+     "n_bids": 3,
+     "min": 0.828,
+     "median": 0.828,
+     "max": 0.828,
+     "pct_floor_min": 174.7,
+     "pct_floor_max": 174.7
+    },
+    {
+     "trait": "Body=Kimono Gold",
+     "n_bids": 3,
+     "min": 0.797,
+     "median": 0.797,
+     "max": 0.797,
+     "pct_floor_min": 168.1,
+     "pct_floor_max": 168.1
+    },
+    {
+     "trait": "Head=Wizard Hat",
+     "n_bids": 3,
+     "min": 0.494,
+     "median": 0.496,
+     "max": 0.496,
+     "pct_floor_min": 104.2,
+     "pct_floor_max": 104.6
+    },
+    {
+     "trait": "Body=Pudgy Boy White",
+     "n_bids": 3,
+     "min": 0.49,
+     "median": 0.49,
+     "max": 0.49,
+     "pct_floor_min": 103.4,
+     "pct_floor_max": 103.4
+    },
+    {
+     "trait": "Body=Pudgy Boy Purple",
+     "n_bids": 3,
+     "min": 0.49,
+     "median": 0.49,
+     "max": 0.49,
+     "pct_floor_min": 103.4,
+     "pct_floor_max": 103.4
+    },
+    {
+     "trait": "Head=Flower Crown",
+     "n_bids": 3,
+     "min": 0.472,
+     "median": 0.474,
+     "max": 0.474,
+     "pct_floor_min": 99.6,
+     "pct_floor_max": 100.0
+    },
+    {
+     "trait": "Head=Biker Helmet",
+     "n_bids": 3,
+     "min": 0.471,
+     "median": 0.471,
+     "max": 0.471,
+     "pct_floor_min": 99.4,
+     "pct_floor_max": 99.4
+    },
+    {
+     "trait": "Head=Top Hat Gold",
+     "n_bids": 3,
+     "min": 0.462,
+     "median": 0.462,
+     "max": 0.464,
+     "pct_floor_min": 97.5,
+     "pct_floor_max": 97.9
+    },
+    {
+     "trait": "Head=Leaf Crown",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Right Flipper=Plushie Gold",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Left Flipper=Surfboard Yellow",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Body=Gold Chain",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Right Flipper=Plushie Ice",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Head=Grizzly Bear Hat",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Body=Tube Dino Green",
+     "n_bids": 3,
+     "min": 0.46,
+     "median": 0.461,
+     "max": 0.461,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    }
+   ],
+   "total_traits": 51
+  },
+  "clonex": {
+   "floor_median": 0.2888,
+   "top15": [
+    {
+     "trait": "Mouth=ARMRD Mutant",
+     "n_bids": 7,
+     "min": 0.279,
+     "median": 0.279,
+     "max": 0.279,
+     "pct_floor_min": 96.6,
+     "pct_floor_max": 96.6
+    },
+    {
+     "trait": "Hair=Witch",
+     "n_bids": 6,
+     "min": 0.279,
+     "median": 0.279,
+     "max": 0.279,
+     "pct_floor_min": 96.6,
+     "pct_floor_max": 96.6
+    },
+    {
+     "trait": "Mouth=INFCTD",
+     "n_bids": 4,
+     "min": 0.279,
+     "median": 0.279,
+     "max": 0.279,
+     "pct_floor_min": 96.6,
+     "pct_floor_max": 96.6
+    },
+    {
+     "trait": "DNA=Angel",
+     "n_bids": 3,
+     "min": 0.317,
+     "median": 0.317,
+     "max": 0.317,
+     "pct_floor_min": 109.8,
+     "pct_floor_max": 109.8
+    },
+    {
+     "trait": "DNA=Demon",
+     "n_bids": 3,
+     "min": 0.289,
+     "median": 0.293,
+     "max": 0.293,
+     "pct_floor_min": 100.1,
+     "pct_floor_max": 101.5
+    },
+    {
+     "trait": "Hair=MEDUZA",
+     "n_bids": 3,
+     "min": 0.28,
+     "median": 0.288,
+     "max": 0.29,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 100.4
+    },
+    {
+     "trait": "Eyewear=RD LAZER",
+     "n_bids": 3,
+     "min": 0.286,
+     "median": 0.286,
+     "max": 0.288,
+     "pct_floor_min": 99.0,
+     "pct_floor_max": 99.7
+    },
+    {
+     "trait": "Back=Energy Wings",
+     "n_bids": 3,
+     "min": 0.284,
+     "median": 0.285,
+     "max": 0.285,
+     "pct_floor_min": 98.3,
+     "pct_floor_max": 98.7
+    },
+    {
+     "trait": "Clothing=DOODLE HOODIE",
+     "n_bids": 3,
+     "min": 0.283,
+     "median": 0.285,
+     "max": 0.285,
+     "pct_floor_min": 98.0,
+     "pct_floor_max": 98.7
+    },
+    {
+     "trait": "Clothing=PLASMA HOODIE",
+     "n_bids": 3,
+     "min": 0.28,
+     "median": 0.281,
+     "max": 0.281,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Clothing=CHRMO HOODIE",
+     "n_bids": 3,
+     "min": 0.28,
+     "median": 0.281,
+     "max": 0.281,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Back=DEMONZ",
+     "n_bids": 3,
+     "min": 0.28,
+     "median": 0.281,
+     "max": 0.281,
+     "pct_floor_min": 97.0,
+     "pct_floor_max": 97.3
+    },
+    {
+     "trait": "Hair=DRIP",
+     "n_bids": 3,
+     "min": 0.279,
+     "median": 0.279,
+     "max": 0.279,
+     "pct_floor_min": 96.6,
+     "pct_floor_max": 96.6
+    },
+    {
+     "trait": "Eyewear=BLU LAZER",
+     "n_bids": 3,
+     "min": 0.279,
+     "median": 0.279,
+     "max": 0.279,
+     "pct_floor_min": 96.6,
+     "pct_floor_max": 96.6
+    },
+    {
+     "trait": "Hair=GHOST PIRATE",
+     "n_bids": 3,
+     "min": 0.279,
+     "median": 0.279,
+     "max": 0.279,
+     "pct_floor_min": 96.6,
+     "pct_floor_max": 96.6
+    }
+   ],
+   "total_traits": 67
+  }
+ },
+ "premium_histogram_all_trait_bids": {
+  "95-100%": 380,
+  "100-110%": 20,
+  "110-130%": 0,
+  "130-175%": 6,
+  "<95%": 0,
+  ">175%": 0
+ },
+ "premium_histogram_by_collection": {
+  "lilpudgys": {
+   "95-100%": 132,
+   "100-110%": 13,
+   "110-130%": 0,
+   "130-175%": 7,
+   "<95%": 0,
+   ">175%": 0
+  },
+  "clonex": {
+   "95-100%": 240,
+   "100-110%": 11,
+   "110-130%": 0,
+   "130-175%": 2,
+   "<95%": 0,
+   ">175%": 0
+  },
+  "doodles-official": {
+   "95-100%": 140,
+   "100-110%": 6,
+   "110-130%": 0,
+   "130-175%": 2,
+   "<95%": 0,
+   ">175%": 0
+  },
+  "azuki": {
+   "95-100%": 140,
+   "100-110%": 6,
+   "110-130%": 0,
+   "130-175%": 2,
+   "<95%": 0,
+   ">175%": 0
+  }
+ },
+ "pudgy_400f_item_bids": {
+  "n_item_bids": 1755,
+  "unique_token_ids": 1226,
+  "bids_without_token": 0,
+  "tokens_quoted_at_multiple_prices": 228,
+  "price_min": 4.21,
+  "price_max": 5.42,
+  "price_median": 4.67,
+  "sample_multi_price": [
+   {
+    "token": "7790",
+    "prices": [
+     5.12,
+     5.13,
+     5.22,
+     5.31,
+     5.42
+    ]
+   },
+   {
+    "token": "480",
+    "prices": [
+     5.21,
+     5.36
+    ]
+   },
+   {
+    "token": "6926",
+    "prices": [
+     5.21,
+     5.36
+    ]
+   },
+   {
+    "token": "5820",
+    "prices": [
+     5.21,
+     5.36
+    ]
+   },
+   {
+    "token": "4937",
+    "prices": [
+     5.26,
+     5.35
+    ]
+   },
+   {
+    "token": "3765",
+    "prices": [
+     5.26,
+     5.35
+    ]
+   },
+   {
+    "token": "4866",
+    "prices": [
+     4.21,
+     5.26,
+     5.35
+    ]
+   },
+   {
+    "token": "2611",
+    "prices": [
+     5.26,
+     5.35
+    ]
+   },
+   {
+    "token": "16",
+    "prices": [
+     5.25,
+     5.34
+    ]
+   },
+   {
+    "token": "7442",
+    "prices": [
+     5.25,
+     5.27
+    ]
+   }
+  ],
+  "max_bids_on_one_token": 12
+ }
+}

@@ -25,14 +25,20 @@ SNAP_PACE = 1.0   # snapshot is small; run a touch faster than the crawlers
 
 
 def price_eth(order):
-    """ETH price from an offers/listings order dict (price.current, then seaport)."""
+    """ETH price from an offers/listings order dict.
+
+    The /all endpoint puts the amount at price.value; the non-/all endpoint uses
+    price.current.value. Fall back to the seaport offer[0].startAmount.
+    """
     pr = order.get("price") or {}
-    cur = pr.get("current") or {}
-    if cur.get("value"):
-        try:
-            return int(cur["value"]) / 10 ** int(cur.get("decimals", 18)), cur.get("currency")
-        except (TypeError, ValueError):
-            pass
+    # price.current (non-/all) then price.value (/all)
+    for node in (pr.get("current") or {}, pr):
+        v = node.get("value")
+        if v:
+            try:
+                return int(v) / 10 ** int(node.get("decimals", 18)), node.get("currency")
+            except (TypeError, ValueError):
+                pass
     params = (order.get("protocol_data") or {}).get("parameters") or {}
     off = params.get("offer") or []
     if off:
@@ -47,11 +53,31 @@ def maker_of(order):
     return ((order.get("protocol_data") or {}).get("parameters") or {}).get("offerer", "").lower()
 
 
+def classify_offer(order):
+    """trait / collection / item, from the raw criteria + seaport consideration.
+
+    Seaport marker: a consideration item with itemType 4 (ERC721_WITH_CRITERIA)
+    and a nonzero identifierOrCriteria is a criteria (trait/collection) bid; the
+    criteria.traits list distinguishes trait offers from collection-wide ones.
+    """
+    crit = order.get("criteria") or {}
+    if crit.get("traits") or crit.get("numeric_traits"):
+        return "trait_offer"
+    enc = crit.get("encoded_token_ids")
+    # collection-wide criteria bid: criteria present, no trait, token set is "*"
+    if crit.get("collection") and (not enc or enc == "*"):
+        return "collection_offer"
+    if crit.get("collection") and enc:
+        # criteria covers a specific token subset but no trait -> still collection-scoped
+        return "collection_offer"
+    return "item_offer"
+
+
 def record(order, kind):
     p, cur = price_eth(order)
     params = (order.get("protocol_data") or {}).get("parameters") or {}
     crit = order.get("criteria") or {}
-    return {
+    rec = {
         "kind": kind,
         "order_hash": order.get("order_hash"),
         "maker": params.get("offerer"),
@@ -60,10 +86,18 @@ def record(order, kind):
         "start_time": params.get("startTime"),
         "expiration": params.get("endTime"),
         "protocol_address": order.get("protocol_address"),
-        "criteria_collection": (crit.get("collection") or {}).get("slug"),
-        "criteria_trait": crit.get("trait"),
         "order_created_at": order.get("order_created_at"),
+        # keep the WHOLE criteria object verbatim (traits, encoded_token_ids, ...)
+        "criteria": crit or None,
+        # asset holds the token id for item offers (criteria is null there)
+        "asset": order.get("asset"),
     }
+    if kind == "offer":
+        rec["offer_type"] = classify_offer(order)
+        # convenience extracts (do not replace the raw criteria above)
+        rec["criteria_collection"] = (crit.get("collection") or {}).get("slug")
+        rec["criteria_traits"] = crit.get("traits")
+    return rec
 
 
 def our_orders(slug, endpoint, items_key, kind):

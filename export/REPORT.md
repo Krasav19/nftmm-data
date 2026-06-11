@@ -30,17 +30,17 @@ See `role_0x8e8d.md` for the full role analysis of the third address.
 | kind | count | share |
 |---|---|---|
 | item_offer | 76,747 | 62.7% |
-| collection_offer | 45,639 | 37.3% |
+| trait_offer | 45,632 | 37.3% |
 | listing | 31 | 0.0% |
-| trait_offer | 0 | 0.0% |
+| collection_offer | 7 | 0.0% |
 
-The two bidders specialise: **0x0282 → collection offers** (45,637), **0x400f → item offers** (76,744). Listings are negligible — this operator is a **buy-side liquidity provider** (it bids the book), not a seller-side lister.
+The two bidders specialise: **0x0282 → trait offers** (45,632), **0x400f → item offers** (76,744). Listings are negligible — this operator is a **buy-side liquidity provider** (it bids the book), not a seller-side lister.
 
 ## Bidder cadence (from `bidder_stats.json`)
 
 | bidder | orders | dominant kind | median gap between offers | p10 / p90 gap |
 |---|---|---|---|---|
-| 0x0282a26e | 45,656 | collection_offer | **1 s** | 0 s / 11 s |
+| 0x0282a26e | 45,656 | trait_offer | **1 s** | 0 s / 11 s |
 | 0x400fe3cf | 76,761 | item_offer | **2 s** | 0 s / 6 s |
 
 Both are automated high-frequency quoting bots (sub-second to a few seconds between offers).
