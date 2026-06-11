@@ -1,0 +1,1307 @@
+{
+ "by_window": {
+  "7d": {
+   "roundtrips": 40,
+   "realized_pnl_eth": 3.993,
+   "win_rate_pct": 80.0,
+   "median_pnl": 0.0205,
+   "mean_pnl": 0.09983,
+   "best": {
+    "token": "pudgypenguins:1453",
+    "buy": 4.28,
+    "sell": 7.0,
+    "pnl": 2.72,
+    "sell_date": "2026-06-07"
+   },
+   "worst": {
+    "token": "lilpudgys:530",
+    "buy": 1.11,
+    "sell": 0.99,
+    "pnl": -0.12,
+    "sell_date": "2026-06-06"
+   }
+  },
+  "30d": {
+   "roundtrips": 79,
+   "realized_pnl_eth": 4.9677,
+   "win_rate_pct": 82.3,
+   "median_pnl": 0.022,
+   "mean_pnl": 0.06288,
+   "best": {
+    "token": "pudgypenguins:1453",
+    "buy": 4.28,
+    "sell": 7.0,
+    "pnl": 2.72,
+    "sell_date": "2026-06-07"
+   },
+   "worst": {
+    "token": "azuki:759",
+    "buy": 1.08,
+    "sell": 0.96,
+    "pnl": -0.12,
+    "sell_date": "2026-05-17"
+   }
+  },
+  "90d": {
+   "roundtrips": 198,
+   "realized_pnl_eth": 8.9269,
+   "win_rate_pct": 83.8,
+   "median_pnl": 0.02225,
+   "mean_pnl": 0.04509,
+   "best": {
+    "token": "pudgypenguins:1453",
+    "buy": 4.28,
+    "sell": 7.0,
+    "pnl": 2.72,
+    "sell_date": "2026-06-07"
+   },
+   "worst": {
+    "token": "boredapeyachtclub:6737",
+    "buy": 5.63,
+    "sell": 5.2,
+    "pnl": -0.43,
+    "sell_date": "2026-03-21"
+   }
+  },
+  "365d": {
+   "roundtrips": 741,
+   "realized_pnl_eth": 16.8804,
+   "win_rate_pct": 66.8,
+   "median_pnl": 0.01,
+   "mean_pnl": 0.02278,
+   "best": {
+    "token": "pudgypenguins:1453",
+    "buy": 4.28,
+    "sell": 7.0,
+    "pnl": 2.72,
+    "sell_date": "2026-06-07"
+   },
+   "worst": {
+    "token": "pudgypenguins:1192",
+    "buy": 8.97,
+    "sell": 7.738,
+    "pnl": -1.232,
+    "sell_date": "2025-10-11"
+   }
+  },
+  "all": {
+   "roundtrips": 874,
+   "realized_pnl_eth": 21.2179,
+   "win_rate_pct": 67.3,
+   "median_pnl": 0.01105,
+   "mean_pnl": 0.02428,
+   "best": {
+    "token": "pudgypenguins:7105",
+    "buy": 8.48,
+    "sell": 11.48,
+    "pnl": 3.0,
+    "sell_date": "2025-05-10"
+   },
+   "worst": {
+    "token": "degods-eth:1580",
+    "buy": 6.86,
+    "sell": 4.55,
+    "pnl": -2.31,
+    "sell_date": "2023-08-15"
+   }
+  }
+ },
+ "by_collection": {
+  "pudgypenguins": {
+   "roundtrips": 223,
+   "realized_pnl_eth": 13.0613,
+   "win_rate_pct": 66.8,
+   "median_pnl": 0.049,
+   "mean_pnl": 0.05857,
+   "median_hold_hours": 16.06
+  },
+  "doodles-official": {
+   "roundtrips": 27,
+   "realized_pnl_eth": 4.123,
+   "win_rate_pct": 85.2,
+   "median_pnl": 0.128,
+   "mean_pnl": 0.1527,
+   "median_hold_hours": 7.48
+  },
+  "boredapeyachtclub": {
+   "roundtrips": 18,
+   "realized_pnl_eth": 3.565,
+   "win_rate_pct": 83.3,
+   "median_pnl": 0.233,
+   "mean_pnl": 0.19806,
+   "median_hold_hours": 1.91
+  },
+  "lilpudgys": {
+   "roundtrips": 222,
+   "realized_pnl_eth": 2.6256,
+   "win_rate_pct": 70.7,
+   "median_pnl": 0.00895,
+   "mean_pnl": 0.01183,
+   "median_hold_hours": 7.4
+  },
+  "clonex": {
+   "roundtrips": 216,
+   "realized_pnl_eth": 1.0901,
+   "win_rate_pct": 64.8,
+   "median_pnl": 0.007,
+   "mean_pnl": 0.00505,
+   "median_hold_hours": 26.18
+  },
+  "azuki": {
+   "roundtrips": 11,
+   "realized_pnl_eth": 0.507,
+   "win_rate_pct": 81.8,
+   "median_pnl": 0.036,
+   "mean_pnl": 0.04609,
+   "median_hold_hours": 6.39
+  },
+  "the-dooplicator": {
+   "roundtrips": 16,
+   "realized_pnl_eth": 0.4221,
+   "win_rate_pct": 75.0,
+   "median_pnl": 0.0228,
+   "mean_pnl": 0.02638,
+   "median_hold_hours": 52.14
+  },
+  "y00ts-eth": {
+   "roundtrips": 1,
+   "realized_pnl_eth": 0.38,
+   "win_rate_pct": 100.0,
+   "median_pnl": 0.38,
+   "mean_pnl": 0.38,
+   "median_hold_hours": 14.72
+  },
+  "good-vibes-club": {
+   "roundtrips": 2,
+   "realized_pnl_eth": 0.147,
+   "win_rate_pct": 100.0,
+   "median_pnl": 0.0735,
+   "mean_pnl": 0.0735,
+   "median_hold_hours": 67.59
+  },
+  "otherside-koda": {
+   "roundtrips": 1,
+   "realized_pnl_eth": 0.103,
+   "win_rate_pct": 100.0,
+   "median_pnl": 0.103,
+   "mean_pnl": 0.103,
+   "median_hold_hours": 24.54
+  },
+  "moonbirds": {
+   "roundtrips": 9,
+   "realized_pnl_eth": 0.055,
+   "win_rate_pct": 77.8,
+   "median_pnl": 0.02,
+   "mean_pnl": 0.00611,
+   "median_hold_hours": 2.11
+  },
+  "persona": {
+   "roundtrips": 2,
+   "realized_pnl_eth": 0.0476,
+   "win_rate_pct": 100.0,
+   "median_pnl": 0.0238,
+   "mean_pnl": 0.0238,
+   "median_hold_hours": 245.07
+  },
+  "gemesis": {
+   "roundtrips": 1,
+   "realized_pnl_eth": -0.0001,
+   "win_rate_pct": 0.0,
+   "median_pnl": -9e-05,
+   "mean_pnl": -9e-05,
+   "median_hold_hours": 0.12
+  },
+  "mrfreeman": {
+   "roundtrips": 1,
+   "realized_pnl_eth": -0.0004,
+   "win_rate_pct": 0.0,
+   "median_pnl": -0.00039,
+   "mean_pnl": -0.00039,
+   "median_hold_hours": 0.01
+  },
+  "bitmappunks": {
+   "roundtrips": 12,
+   "realized_pnl_eth": -0.0023,
+   "win_rate_pct": 8.3,
+   "median_pnl": -0.00012,
+   "mean_pnl": -0.00019,
+   "median_hold_hours": 2356.72
+  },
+  "normies": {
+   "roundtrips": 2,
+   "realized_pnl_eth": -0.0253,
+   "win_rate_pct": 50.0,
+   "median_pnl": -0.01265,
+   "mean_pnl": -0.01265,
+   "median_hold_hours": 168.17
+  },
+  "sappy-seals": {
+   "roundtrips": 49,
+   "realized_pnl_eth": -0.156,
+   "win_rate_pct": 49.0,
+   "median_pnl": -0.00099,
+   "mean_pnl": -0.00318,
+   "median_hold_hours": 39.48
+  },
+  "degods-eth": {
+   "roundtrips": 52,
+   "realized_pnl_eth": -2.0542,
+   "win_rate_pct": 75.0,
+   "median_pnl": 0.1286,
+   "mean_pnl": -0.0395,
+   "median_hold_hours": 16.63
+  },
+  "mutant-ape-yacht-club": {
+   "roundtrips": 9,
+   "realized_pnl_eth": -2.6705,
+   "win_rate_pct": 55.6,
+   "median_pnl": 0.01,
+   "mean_pnl": -0.29672,
+   "median_hold_hours": 6.9
+  }
+ },
+ "by_address": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e (0x0282a26e)": {
+   "roundtrips": 309,
+   "realized_pnl_eth": -1.8402,
+   "win_rate_pct": 67.3,
+   "median_pnl": 0.014,
+   "mean_pnl": -0.00596,
+   "best": {
+    "token": "degods-eth:5041",
+    "buy": 9.5,
+    "sell": 10.18,
+    "pnl": 0.68,
+    "sell_date": "2023-08-09"
+   },
+   "worst": {
+    "token": "degods-eth:1580",
+    "buy": 6.86,
+    "sell": 4.55,
+    "pnl": -2.31,
+    "sell_date": "2023-08-15"
+   }
+  },
+  "0x8e8d6246c45d0e7f68172e85573546d90fc2e062 (0x8e8de062)": {
+   "roundtrips": 292,
+   "realized_pnl_eth": 3.5429,
+   "win_rate_pct": 63.0,
+   "median_pnl": 0.008,
+   "mean_pnl": 0.01213,
+   "best": {
+    "token": "pudgypenguins:759",
+    "buy": 6.06,
+    "sell": 7.6,
+    "pnl": 1.54,
+    "sell_date": "2025-10-12"
+   },
+   "worst": {
+    "token": "pudgypenguins:1192",
+    "buy": 8.97,
+    "sell": 7.738,
+    "pnl": -1.232,
+    "sell_date": "2025-10-11"
+   }
+  },
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf (0x400fe3cf)": {
+   "roundtrips": 273,
+   "realized_pnl_eth": 19.5152,
+   "win_rate_pct": 71.8,
+   "median_pnl": 0.0171,
+   "mean_pnl": 0.07148,
+   "best": {
+    "token": "pudgypenguins:7105",
+    "buy": 8.48,
+    "sell": 11.48,
+    "pnl": 3.0,
+    "sell_date": "2025-05-10"
+   },
+   "worst": {
+    "token": "pudgypenguins:4740",
+    "buy": 5.75,
+    "sell": 5.25,
+    "pnl": -0.5,
+    "sell_date": "2026-01-21"
+   }
+  }
+ },
+ "unclosed_inventory": {
+  "total_lots": 174,
+  "total_frozen_eth": 755.6968,
+  "by_collection": {
+   "degods-eth": {
+    "count": 59,
+    "frozen_eth": 273.074,
+    "tokens": [
+     {
+      "token": "4192",
+      "buy": 7.88,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "8380",
+      "buy": 7.95,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "333",
+      "buy": 8.60499,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "9122",
+      "buy": 8.58,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "6404",
+      "buy": 9.17,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "9535",
+      "buy": 4.42,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "8940",
+      "buy": 10.0,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "289",
+      "buy": 10.0503,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "3973",
+      "buy": 9.85,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "6353",
+      "buy": 9.869,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "3674",
+      "buy": 7.26,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "7060",
+      "buy": 8.16,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2043",
+      "buy": 8.73,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "7819",
+      "buy": 8.9,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2197",
+      "buy": 8.38,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2501",
+      "buy": 8.18,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "3223",
+      "buy": 7.89999,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1256",
+      "buy": 7.887,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "5005",
+      "buy": 8.81,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "3344",
+      "buy": 2.91,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "152",
+      "buy": 10.0,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1420",
+      "buy": 4.99,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1868",
+      "buy": 7.0,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1971",
+      "buy": 7.25,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "436",
+      "buy": 6.99,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "7985",
+      "buy": 5.05,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "4074",
+      "buy": 5.35,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1903",
+      "buy": 3.95,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "9295",
+      "buy": 5.75,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1124",
+      "buy": 3.988,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "151",
+      "buy": 4.19,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "8391",
+      "buy": 4.229,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2377",
+      "buy": 4.14,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1673",
+      "buy": 4.94,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2620",
+      "buy": 3.41,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5820",
+      "buy": 2.76,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "408",
+      "buy": 2.14,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "8341",
+      "buy": 1.61,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5355",
+      "buy": 1.44,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "8936",
+      "buy": 1.84,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5387",
+      "buy": 2.39,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4056",
+      "buy": 1.91,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3530",
+      "buy": 0.91,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7538",
+      "buy": 0.91,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3088",
+      "buy": 0.84,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9946",
+      "buy": 0.818457,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7550",
+      "buy": 0.818447,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9076",
+      "buy": 0.818457,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "1216",
+      "buy": 0.88,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "8447",
+      "buy": 0.9578,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "boredapeyachtclub": {
+    "count": 19,
+    "frozen_eth": 211.078,
+    "tokens": [
+     {
+      "token": "1224",
+      "buy": 11.45,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "3271",
+      "buy": 10.63,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "9092",
+      "buy": 11.449,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "7002",
+      "buy": 10.72,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "8029",
+      "buy": 10.13,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "3700",
+      "buy": 11.05,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "7354",
+      "buy": 11.17,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "6824",
+      "buy": 10.96,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "7248",
+      "buy": 12.32,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "7191",
+      "buy": 12.15,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "9026",
+      "buy": 12.71,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "293",
+      "buy": 12.54,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "1089",
+      "buy": 13.1,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "4261",
+      "buy": 12.61,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "6660",
+      "buy": 12.389,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "5803",
+      "buy": 10.93,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "261",
+      "buy": 9.1,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "5307",
+      "buy": 9.25,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "848",
+      "buy": 6.42,
+      "addr": "0x8e8de062"
+     }
+    ]
+   },
+   "pudgypenguins": {
+    "count": 19,
+    "frozen_eth": 163.002,
+    "tokens": [
+     {
+      "token": "2417",
+      "buy": 9.147,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "969",
+      "buy": 8.93,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "6723",
+      "buy": 8.35,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3593",
+      "buy": 9.52,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7105",
+      "buy": 11.29,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "8565",
+      "buy": 8.55,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7751",
+      "buy": 9.17,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "1626",
+      "buy": 11.25,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3114",
+      "buy": 9.01,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "932",
+      "buy": 9.22,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "1205",
+      "buy": 10.36,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "1466",
+      "buy": 10.31,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "4956",
+      "buy": 10.27,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "2876",
+      "buy": 10.32,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "1294",
+      "buy": 7.69,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5284",
+      "buy": 5.55,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "5692",
+      "buy": 5.615,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "4740",
+      "buy": 4.07,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "47",
+      "buy": 4.38,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "doodles-official": {
+    "count": 12,
+    "frozen_eth": 52.9446,
+    "tokens": [
+     {
+      "token": "5225",
+      "buy": 6.2,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3516",
+      "buy": 5.33,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3220",
+      "buy": 4.67,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "1876",
+      "buy": 4.45,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5056",
+      "buy": 4.51,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "1474",
+      "buy": 4.11,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4730",
+      "buy": 3.6446,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5561",
+      "buy": 4.32,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7771",
+      "buy": 4.11,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9460",
+      "buy": 4.12,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "950",
+      "buy": 3.74,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9815",
+      "buy": 3.74,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "mutant-ape-yacht-club": {
+    "count": 3,
+    "frozen_eth": 20.54,
+    "tokens": [
+     {
+      "token": "13844",
+      "buy": 9.31,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "4288",
+      "buy": 9.05,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "5235",
+      "buy": 2.18,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "lilpudgys": {
+    "count": 16,
+    "frozen_eth": 14.2251,
+    "tokens": [
+     {
+      "token": "7327",
+      "buy": 1.136,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "17681",
+      "buy": 1.17,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3250",
+      "buy": 1.17,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "13060",
+      "buy": 1.04,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "10499",
+      "buy": 1.06,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "19245",
+      "buy": 1.07,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9079",
+      "buy": 1.1,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "11482",
+      "buy": 1.1,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "14487",
+      "buy": 1.35,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "20066",
+      "buy": 1.35674,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "2924",
+      "buy": 0.45,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "18801",
+      "buy": 0.425,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "13844",
+      "buy": 0.44,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2152",
+      "buy": 0.4529,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "17575",
+      "buy": 0.4525,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9723",
+      "buy": 0.452,
+      "addr": "0x0282a26e"
+     }
+    ]
+   },
+   "sappy-seals": {
+    "count": 9,
+    "frozen_eth": 4.694,
+    "tokens": [
+     {
+      "token": "9089",
+      "buy": 0.57,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4628",
+      "buy": 0.55,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "1890",
+      "buy": 0.56,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "6208",
+      "buy": 0.53,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "6159",
+      "buy": 0.615,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "1833",
+      "buy": 0.65,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7943",
+      "buy": 0.56,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "9710",
+      "buy": 0.319,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "4362",
+      "buy": 0.34,
+      "addr": "0x8e8de062"
+     }
+    ]
+   },
+   "y00ts-eth": {
+    "count": 5,
+    "frozen_eth": 3.6169,
+    "tokens": [
+     {
+      "token": "3951",
+      "buy": 0.86,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "10240",
+      "buy": 1.03,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "2131",
+      "buy": 1.06,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "4941",
+      "buy": 0.3205,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7859",
+      "buy": 0.3464,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "azuki": {
+    "count": 1,
+    "frozen_eth": 3.43,
+    "tokens": [
+     {
+      "token": "6307",
+      "buy": 3.43,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "clonex": {
+    "count": 11,
+    "frozen_eth": 3.105,
+    "tokens": [
+     {
+      "token": "8204",
+      "buy": 0.18,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4157",
+      "buy": 0.188,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "19543",
+      "buy": 0.342,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "4248",
+      "buy": 0.342,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "1798",
+      "buy": 0.342,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "18878",
+      "buy": 0.265,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "7844",
+      "buy": 0.282,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "6080",
+      "buy": 0.283,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "11598",
+      "buy": 0.301,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "15474",
+      "buy": 0.292,
+      "addr": "0x0282a26e"
+     },
+     {
+      "token": "7864",
+      "buy": 0.288,
+      "addr": "0x0282a26e"
+     }
+    ]
+   },
+   "persona": {
+    "count": 12,
+    "frozen_eth": 2.31,
+    "tokens": [
+     {
+      "token": "7494",
+      "buy": 0.25,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "7453",
+      "buy": 0.22,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5470",
+      "buy": 0.25,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "6414",
+      "buy": 0.19,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3337",
+      "buy": 0.22,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3144",
+      "buy": 0.17,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4623",
+      "buy": 0.17,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4674",
+      "buy": 0.23,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "4014",
+      "buy": 0.15,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "3454",
+      "buy": 0.15,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "5685",
+      "buy": 0.15,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "6065",
+      "buy": 0.16,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "otherside-koda": {
+    "count": 2,
+    "frozen_eth": 2.2,
+    "tokens": [
+     {
+      "token": "9629",
+      "buy": 1.1,
+      "addr": "0x8e8de062"
+     },
+     {
+      "token": "8841",
+      "buy": 1.1,
+      "addr": "0x8e8de062"
+     }
+    ]
+   },
+   "nftbutler": {
+    "count": 1,
+    "frozen_eth": 0.899,
+    "tokens": [
+     {
+      "token": "42745998150656004690816543961586238000273307462307754421658803578179357246440",
+      "buy": 0.899,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "the-dooplicator": {
+    "count": 1,
+    "frozen_eth": 0.31,
+    "tokens": [
+     {
+      "token": "7638",
+      "buy": 0.31,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   },
+   "good-vibes-club": {
+    "count": 1,
+    "frozen_eth": 0.261,
+    "tokens": [
+     {
+      "token": "4533",
+      "buy": 0.261,
+      "addr": "0x8e8de062"
+     }
+    ]
+   },
+   "zogz-editions-by-matt-furie": {
+    "count": 2,
+    "frozen_eth": 0.0051,
+    "tokens": [
+     {
+      "token": "18",
+      "buy": 0.00256,
+      "addr": "0x400fe3cf"
+     },
+     {
+      "token": "58",
+      "buy": 0.0025,
+      "addr": "0x8e8de062"
+     }
+    ]
+   },
+   "silks-genesis-avatars": {
+    "count": 1,
+    "frozen_eth": 0.0021,
+    "tokens": [
+     {
+      "token": "1848",
+      "buy": 0.0021,
+      "addr": "0x400fe3cf"
+     }
+    ]
+   }
+  }
+ },
+ "sells_without_known_entry": {
+  "note": "NFT bought outside captured history (e.g. on Blur) \u2014 entry price unknown, EXCLUDED from P&L.",
+  "count": 132,
+  "total_sell_volume_eth": 383.6437,
+  "by_collection": {
+   "pudgypenguins": {
+    "count": 23,
+    "sell_eth": 178.771
+   },
+   "degods-eth": {
+    "count": 23,
+    "sell_eth": 155.015
+   },
+   "doodles-official": {
+    "count": 6,
+    "sell_eth": 23.16
+   },
+   "boredapeyachtclub": {
+    "count": 1,
+    "sell_eth": 11.2
+   },
+   "mutant-ape-yacht-club": {
+    "count": 2,
+    "sell_eth": 10.94
+   },
+   "lilpudgys": {
+    "count": 3,
+    "sell_eth": 4.148
+   },
+   "clonex": {
+    "count": 1,
+    "sell_eth": 0.33
+   },
+   "bitmappunks": {
+    "count": 73,
+    "sell_eth": 0.0797
+   }
+  }
+ },
+ "meta": {
+  "total_sales_events": 2076,
+  "closed_roundtrips": 874,
+  "roundtrips_priceless_leg": 11,
+  "data_through": "2026-06-09",
+  "method": "FIFO buy->sell match by (address,collection,token); ETH/WETH/Blur-Pool treated 1:1 ETH; transfers ignored"
+ }
+}
