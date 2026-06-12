@@ -97,3 +97,25 @@ _NFT bought outside captured history (e.g. on Blur) — entry price unknown, EXC
 | lilpudgys | 3 | 4.148 |
 | clonex | 1 | 0.33 |
 | bitmappunks | 73 | 0.0797 |
+
+---
+
+## 6. Blur entry backfill (on-chain, Blur API pending)
+
+The Blur API request is still pending, so the entry leg of the 132 unmatched sells was reconstructed **on-chain** via a public Ethereum RPC: OpenSea reports Blur/non-OS fills only as price-less `transfer`s, so for each token we pulled the inbound-transfer transaction and summed ETH+WETH+BETH (Blur Pool) paid by our wallet = the true entry price.
+
+| metric | value |
+|---|---|
+| entries recovered | **44** of 132 |
+| recovered sell volume | 292.41 ETH |
+| recovered round-trip P&L (gross) | **+1.212 ETH** |
+| venue: BlurExchangeV2 + BlurPool | 36 |
+| venue: Blur router (BETH/WETH flow) | 8 |
+| **combined realized (OpenSea + Blur)** | **918 trips, +22.4299 ETH** |
+
+**Residual blind spot (now small):**
+- 88 sells still unpriced, but **73 are dust** (mostly bitmappunks ~0.0001 ETH floor — mints/free transfers, not Blur buys).
+- Only **15 non-dust sells / 91.15 ETH** remain unattributed: inbound transfer carried 0 on-chain ETH/WETH/BETH (cross-wallet moves, claims, or acquisitions before our event window).
+
+**Read:** the Blur leg is **roughly break-even** (+1.21 ETH over 44 round-trips) — it does not hide large profits or losses (one −8.29 ETH degods outlier aside). The earlier "384 ETH of unattributable Blur sells" is now **closed to ~91 ETH of non-dust residual**, mostly long-held legacy degods, not the active loop.
+

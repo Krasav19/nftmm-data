@@ -1303,5 +1303,21 @@
   "roundtrips_priceless_leg": 11,
   "data_through": "2026-06-09",
   "method": "FIFO buy->sell match by (address,collection,token); ETH/WETH/Blur-Pool treated 1:1 ETH; transfers ignored"
+ },
+ "blur_backfill": {
+  "method": "on-chain (public RPC): inbound-transfer tx, sum ETH+WETH+BETH paid by wallet",
+  "entries_recovered": 44,
+  "recovered_pnl_eth": 1.212,
+  "recovered_sell_volume_eth": 292.41,
+  "combined_realized_trips": 918,
+  "combined_realized_pnl_eth": 22.4299,
+  "residual_unpriced_sells": 88,
+  "residual_nondust_sells": 15,
+  "residual_nondust_volume_eth": 91.15,
+  "residual_dust_sells": 73,
+  "venues": {
+   "BlurExchangeV2+BlurPool": 36,
+   "blur-router": 8
+  }
  }
 }

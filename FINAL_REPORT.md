@@ -35,11 +35,16 @@ the-dooplicator, moonbirds, y00ts, persona, normies — once-active books now fr
 
 ## 2. Marketplaces
 
-**OpenSea / Seaport only in this dataset** (protocol `0x0000…eb395` = Seaport 1.6,
-plus older Seaport on historical fills). **Blur is used heavily but not captured** —
-inferred from 132 lifetime sells (384 ETH) and 5 recent sells (22.5 ETH) that have
-OpenSea exits but no OpenSea entry, plus Blur-Pool (ETH-pegged) payment tokens in
-sales. Any cross-venue P&L statement is therefore incomplete.
+**OpenSea / Seaport** for bids/listings (protocol `0x0000…eb395` = Seaport 1.6).
+**Blur is the second venue** — and its trade leg has now been **closed on-chain**
+(`blur_backfill.py`, Blur API still pending). Of the 132 OpenSea-exit-only sells,
+**44 entries were recovered via the inbound-transfer transaction** (36 explicitly
+**BlurExchangeV2 + Blur Pool / BETH**, 8 via a Blur router with BETH/WETH flow),
+confirming Blur Exchange v2 + Blend-era settlement. Residual unattributed:
+**15 non-dust sells / 91 ETH** (inbound transfer with 0 on-chain payment — cross-
+wallet/claims/pre-window) plus 73 bitmappunks dust. So the venue set is **OpenSea +
+Blur**, and the cross-venue blind spot is now ~91 ETH (mostly legacy degods), down
+from the earlier 384 ETH.
 
 ## 3. Bid frequency, cancellations, lifetime, sizing
 
@@ -136,7 +141,8 @@ via **accepting bids / Blur**, not standing OpenSea asks.
 | window | round-trips | realized P&L | win rate |
 |---|---|---|---|
 | 90 d (active) | 198 | **+8.93 ETH** | 67% → rising to 80–94% by month |
-| all history | 874 | **+21.22 ETH** | 67.3% |
+| all history (OpenSea) | 874 | **+21.22 ETH** | 67.3% |
+| **+ Blur entries backfilled** | **918** | **+22.43 ETH** | — |
 
 By bot: **0x400f +19.5 ETH (71.8% win)** is the engine; 0x8e8d +3.5; **0x0282 −1.8**
 (wins often, tiny margins). Top trade +3.0 ETH (pudgy 7105 8.48→11.48); worst −2.31
@@ -156,15 +162,22 @@ consistent with the data:
    wall" more than "scalp a spread."
 
 Either way, **0x0282's −1.8 ETH should not be read as a losing strategy**; it is the
-OpenSea-only slice of a bot whose payoff is realised off this dataset.
+OpenSea-only slice of a bot whose payoff is realised off this dataset. *Update from
+the on-chain Blur backfill:* the recovered Blur round-trips are **roughly break-even
+(+1.21 ETH over 44 trips)**, so the off-OpenSea leg neither rescues nor sinks the
+economics materially — consistent with the accumulation-feeder reading over a
+hidden-profit one.
 
 **Unrealized (mark-to-floor, conservative):** open inventory **−466 ETH**, but this
 is **legacy**: 119 of 174 lots are >1 year old, dominated by **DeGods −262 ETH**
 (2023 buys ~10 ETH, floor verified 0.17, same contract — real, not an artifact) and
 **BAYC −41 ETH**. The **active <90 d book is ~flat (+0.08 ETH)**.
 
-**Excluded:** 132 lifetime sells / 384 ETH (90 d: 5 / 22.5 ETH) bought off-platform
-(Blur) — entry unknown, kept out of P&L. These are the size of the blind spot.
+**Blur backfill (on-chain):** of the 132 off-platform sells (384 ETH), **44 entries
+recovered** → combined realized **+22.43 ETH** over 918 trips; the Blur leg is
+**~break-even (+1.21 ETH)**. Residual blind spot shrinks to **15 non-dust sells /
+91 ETH** (zero on-chain payment on the inbound — cross-wallet/claims/pre-window) plus
+73 bitmappunks dust. See `export/pnl.md` §6.
 
 ---
 
@@ -173,6 +186,9 @@ Through the operating lens, this is a **disciplined, profitable, bid-side trait/
 market-making loop on three collections** (+8.9 ETH/90 d on OpenSea alone, gross),
 run by two high-frequency Seaport bots that cancel-and-replace on a short timer and
 re-anchor to floor lazily (~1 h). The eye-catching **−466 ETH is legacy directional
-risk** from an earlier era, not the current MM book. The one real unknown is **Blur**:
-a ~2.5% live blind spot (larger historically) means the true cross-venue economics
-cannot be closed from this data.
+risk** from an earlier era, not the current MM book. The **Blur leg is now closed
+on-chain** (44/132 entries recovered, ~break-even +1.21 ETH; combined realized
++22.43 ETH) — leaving only a **~91 ETH non-dust residual**, mostly long-held legacy
+degods. So the cross-venue economics are now largely reconstructed, not a black box:
+a small, consistently profitable OpenSea MM loop with a break-even Blur leg, sitting
+on stranded 2023 inventory.
