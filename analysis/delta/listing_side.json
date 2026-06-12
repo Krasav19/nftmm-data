@@ -1,0 +1,64 @@
+{
+ "total_listing_observations": 737,
+ "unique_listings": 11,
+ "by_maker": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e": 7,
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": 4
+ },
+ "by_collection": {
+  "clonex": 7,
+  "pudgypenguins": 4
+ },
+ "reprices": 5,
+ "reprice_up": 5,
+ "reprice_down": 0,
+ "median_reprice_step_pct": 1.81,
+ "withdrawals_no_reprice": 4,
+ "reprice_detail": [
+  {
+   "maker": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "slug": "clonex",
+   "token": "None",
+   "from": 0.3033,
+   "to": 0.3088,
+   "step_pct": 1.81,
+   "dir": "up"
+  },
+  {
+   "maker": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "slug": "clonex",
+   "token": "None",
+   "from": 0.3088,
+   "to": 0.344,
+   "step_pct": 11.4,
+   "dir": "up"
+  },
+  {
+   "maker": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "slug": "clonex",
+   "token": "None",
+   "from": 0.344,
+   "to": 0.346,
+   "step_pct": 0.58,
+   "dir": "up"
+  },
+  {
+   "maker": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "slug": "clonex",
+   "token": "None",
+   "from": 0.346,
+   "to": 0.434,
+   "step_pct": 25.43,
+   "dir": "up"
+  },
+  {
+   "maker": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "slug": "pudgypenguins",
+   "token": "None",
+   "from": 4.427,
+   "to": 4.437,
+   "step_pct": 0.23,
+   "dir": "up"
+  }
+ ]
+}

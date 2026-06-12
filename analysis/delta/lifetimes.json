@@ -1,0 +1,102 @@
+{
+ "by_kind": {
+  "trait": {
+   "closed_orders": 22742,
+   "life_min_observed_lowerbound": {
+    "median": 0.0,
+    "p25": 0.0,
+    "p75": 0.0,
+    "min": 0.0,
+    "max": 165.0
+   },
+   "snaps_alive": {
+    "median": 1.0,
+    "p75": 1.0,
+    "max": 12,
+    "seen_once_pct": 97.5
+   },
+   "reason_share": {
+    "replaced": 57.0,
+    "expired": 43.0,
+    "filled": 0.0
+   },
+   "reason_count": {
+    "expired": 9774,
+    "replaced": 12968
+   },
+   "histogram_snaps_alive": {
+    "1": 22175,
+    "2": 556,
+    "3": 6,
+    "5": 1,
+    "8": 1,
+    "9": 1,
+    "11": 1,
+    "12": 1
+   }
+  },
+  "item": {
+   "closed_orders": 38377,
+   "life_min_observed_lowerbound": {
+    "median": 45.0,
+    "p25": 15.0,
+    "p75": 135.0,
+    "min": 0.0,
+    "max": 474.6
+   },
+   "snaps_alive": {
+    "median": 4,
+    "p75": 10.0,
+    "max": 33,
+    "seen_once_pct": 24.6
+   },
+   "reason_share": {
+    "replaced": 43.7,
+    "expired": 56.3,
+    "filled": 0.0
+   },
+   "reason_count": {
+    "expired": 21617,
+    "replaced": 16760
+   },
+   "histogram_snaps_alive": {
+    "1": 9440,
+    "2": 7088,
+    "3": 1865,
+    "4": 5591,
+    "5": 982,
+    "6": 750,
+    "7": 440,
+    "8": 1893,
+    "9": 224,
+    "10": 1132,
+    "11": 338,
+    "12": 1438,
+    "13": 344,
+    "14": 101,
+    "15": 182,
+    "16": 3304,
+    "17": 615,
+    "18": 30,
+    "19": 66,
+    "20": 36,
+    "21": 20,
+    "22": 23,
+    "23": 22,
+    "24": 1708,
+    "25": 381,
+    "26": 6,
+    "27": 4,
+    "28": 7,
+    "29": 6,
+    "30": 7,
+    "31": 1,
+    "32": 284,
+    "33": 49
+   }
+  }
+ },
+ "_sampling_note": "15-min sampling floors observed lifetime; true TTL (10-30m) is mostly sub-sampling, so 'snaps_alive' is the more honest signal than life_min.",
+ "total_unique_orders": 63013,
+ "still_live_at_end": 1894
+}
