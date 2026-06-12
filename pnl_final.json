@@ -1,0 +1,71 @@
+{
+ "method": "cross-venue FIFO (OpenSea + Blur on-chain, deduped by wallet/contract/token within 24h; Blur authoritative). 90d trailing window. Fees: OpenSea 1% on sells only, Blur 0%, royalty 0. Gas: Blur real (RPC receipt), OpenSea flat 0.0015 ETH/leg. All P&L net.",
+ "window_start": "2026-03-14",
+ "as_of": "2026-06-12",
+ "floor_source": "2026-06-12T20:45:01Z",
+ "opensea_sales_deduped_against_blur": 257,
+ "ledger_legs": 1540,
+ "by_wallet": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+   "name": "0x0282 (trait bot)",
+   "realized": {
+    "trips": 105,
+    "pnl": 1.2126194996624338,
+    "win": 76.19047619047619
+   },
+   "open": {
+    "lots": 11,
+    "cost": 4.285127559309796,
+    "mtm": 3.7123999199999997,
+    "unrealized": -0.5727276393097958
+   }
+  },
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+   "name": "0x400f (item bot)",
+   "realized": {
+    "trips": 38,
+    "pnl": 3.4292384329612817,
+    "win": 78.94736842105263
+   },
+   "open": {
+    "lots": 18,
+    "cost": 80.35793972280021,
+    "mtm": 68.024355149955,
+    "unrealized": -12.333584572845217
+   }
+  },
+  "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
+   "name": "0x8e8d (vault)",
+   "realized": {
+    "trips": 0,
+    "pnl": 0,
+    "win": 0.0
+   },
+   "open": {
+    "lots": 1,
+    "cost": 4.260038582438346,
+    "mtm": 4.439997009997,
+    "unrealized": 0.17995842755865343
+   }
+  }
+ },
+ "total": {
+  "realized": {
+   "trips": 143,
+   "pnl": 4.641857932623716,
+   "win": 76.92307692307692
+  },
+  "open": {
+   "lots": 30,
+   "cost": 88.90310586454835,
+   "mtm": 76.176752079952,
+   "unrealized": -12.726353784596359
+  },
+  "orphan_entry_excluded": {
+   "trips": 11,
+   "pnl": -0.5122666435815451,
+   "win": 54.54545454545455
+  },
+  "active_loop_net": -8.084495851972644
+ }
+}
