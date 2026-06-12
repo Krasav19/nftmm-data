@@ -35,16 +35,22 @@ the-dooplicator, moonbirds, y00ts, persona, normies — once-active books now fr
 
 ## 2. Marketplaces
 
-**OpenSea / Seaport** for bids/listings (protocol `0x0000…eb395` = Seaport 1.6).
-**Blur is the second venue** — and its trade leg has now been **closed on-chain**
-(`blur_backfill.py`, Blur API still pending). Of the 132 OpenSea-exit-only sells,
-**44 entries were recovered via the inbound-transfer transaction** (36 explicitly
-**BlurExchangeV2 + Blur Pool / BETH**, 8 via a Blur router with BETH/WETH flow),
-confirming Blur Exchange v2 + Blend-era settlement. Residual unattributed:
-**15 non-dust sells / 91 ETH** (inbound transfer with 0 on-chain payment — cross-
-wallet/claims/pre-window) plus 73 bitmappunks dust. So the venue set is **OpenSea +
-Blur**, and the cross-venue blind spot is now ~91 ETH (mostly legacy degods), down
-from the earlier 384 ETH.
+**OpenSea / Seaport** for bids/listings (protocol `0x0000…eb395` = Seaport 1.6) and
+**Blur** (BETH / Blur Pool settlement). The full Blur history is now reconstructed
+on-chain (`blur_full.py`): **443 real Blur NFT trades** across the three wallets
+(BETH-pool funding/Blend flows excluded; 326 settlements that also showed as OpenSea
+"sales" deduped by tx hash). See `analysis/blur/BLUR_ANALYSIS.md`.
+
+**Volume is split roughly evenly by venue:** each wallet trades ~720 ETH on Blur vs
+~1.1–1.5k ETH on OpenSea. By *count* OpenSea dominates (the small bid orders), but the
+**big-ticket directional trades (degods, BAYC) ran largely through Blur** — which is
+exactly why the OpenSea-only P&L looked far rosier than reality.
+
+**This revises the earlier "idle vault" finding:** wallet `0x8e8d` is **not idle** —
+it does **110 Blur trades / 724 ETH** (it simply barely uses OpenSea). All three
+wallets are active cross-venue. Residual blind spot after full backfill:
+**109 orphan sells + 202 open lots** with no matched leg on either venue (pre-2023
+history edges, cross-wallet moves, mints) — boundary effects, not a hidden venue.
 
 ## 3. Bid frequency, cancellations, lifetime, sizing
 
@@ -136,37 +142,33 @@ via **accepting bids / Blur**, not standing OpenSea asks.
 
 ## 9. P&L
 
-**Realized (FIFO, OpenSea, gross):**
+**Realized (FIFO, gross). The full cross-venue figure (OpenSea + complete on-chain
+Blur, deduped by tx) supersedes the OpenSea-only view:**
 
-| window | round-trips | realized P&L | win rate |
+| scope | round-trips | realized P&L | win rate |
 |---|---|---|---|
-| 90 d (active) | 198 | **+8.93 ETH** | 67% → rising to 80–94% by month |
-| all history (OpenSea) | 874 | **+21.22 ETH** | 67.3% |
-| **+ Blur entries backfilled** | **918** | **+22.43 ETH** | — |
+| OpenSea-only, all history | 874 | +21.22 ETH | 67.3% |
+| **cross-venue, all history** | **924** | **−30.35 ETH** | 66.1% |
+| **cross-venue, 90 d active** | **204** | **−2.22 ETH** | 81.4% |
 
-By bot: **0x400f +19.5 ETH (71.8% win)** is the engine; 0x8e8d +3.5; **0x0282 −1.8**
-(wins often, tiny margins). Top trade +3.0 ETH (pudgy 7105 8.48→11.48); worst −2.31
-(degods 1580).
+The OpenSea-only +21 ETH was **misleadingly positive**: it omitted the high-priced
+**degods/BAYC** buys that settled on **Blur** and pair into losing exits. With both
+venues, realized is **−30.4 ETH gross** all-time. **By wallet (cross-venue):
+0x400f (item bot) +9.5 ETH is the only profitable one**; 0x0282 (trait) −15.3 and
+0x8e8d (vault) −24.5 carried the directional degods/bayc losses. ~22% of round-trips
+are cross-venue (buy one venue, sell the other). The 90-day active loop is
+**near break-even (−2.2 ETH, 81% win)** — many small wins, a few large degods losers.
 
-**Hypothesis — 0x0282 (trait bot) is not a standalone profit centre.** On the
-OpenSea-visible data it is **−1.8 ETH realized with ~0% on-grid fills** despite
-45.6k trait bids — i.e. its economics don't close on OpenSea. Two readings, both
-consistent with the data:
-1. **Blur-closed economics** — the trait bot's fills/exits happen on Blur (invisible
-   here), so its true P&L is unmeasured rather than negative. The 2.5% live / large
-   historical Blur blind spot sits exactly where its missing fills would be.
-2. **Accumulation feeder** — it isn't meant to flip; it sources rare-trait inventory
-   at/near floor into the operator's shared book, with monetisation realised
-   elsewhere (item-bot resale, Blur, or longer-horizon holding). The 57.6% replace /
-   42.4% expire churn with near-floor pricing fits "keep a standing rare-trait bid
-   wall" more than "scalp a spread."
-
-Either way, **0x0282's −1.8 ETH should not be read as a losing strategy**; it is the
-OpenSea-only slice of a bot whose payoff is realised off this dataset. *Update from
-the on-chain Blur backfill:* the recovered Blur round-trips are **roughly break-even
-(+1.21 ETH over 44 trips)**, so the off-OpenSea leg neither rescues nor sinks the
-economics materially — consistent with the accumulation-feeder reading over a
-hidden-profit one.
+**Resolved — 0x0282 (trait bot) economics do NOT close on Blur.** The earlier open
+question ("its OpenSea −1.8 ETH must be rescued on Blur") is now answered by the full
+on-chain Blur history: cross-venue, **0x0282 is −15.3 ETH**, not break-even. The Blur
+leg made it *worse*, not better, because the trait bot's degods/clonex Blur buys pair
+into losing exits. So the **accumulation-feeder** reading is the right one over the
+hidden-profit one: 0x0282 sources rare-trait/directional inventory (it leans **taker
+on Blur**, 75/46) that the operator then carries — and much of that inventory is the
+underwater degods bag. It is a **cost centre feeding the book**, not a self-funding
+scalper. (The first 44-pair backfill suggested ~break-even; the *complete* 443-trade
+history corrects that to clearly negative.)
 
 **Unrealized (mark-to-floor, conservative):** open inventory **−466 ETH**, but this
 is **legacy**: 119 of 174 lots are >1 year old, dominated by **DeGods −262 ETH**
@@ -182,13 +184,15 @@ recovered** → combined realized **+22.43 ETH** over 918 trips; the Blur leg is
 ---
 
 ### Bottom line
-Through the operating lens, this is a **disciplined, profitable, bid-side trait/item
-market-making loop on three collections** (+8.9 ETH/90 d on OpenSea alone, gross),
-run by two high-frequency Seaport bots that cancel-and-replace on a short timer and
-re-anchor to floor lazily (~1 h). The eye-catching **−466 ETH is legacy directional
-risk** from an earlier era, not the current MM book. The **Blur leg is now closed
-on-chain** (44/132 entries recovered, ~break-even +1.21 ETH; combined realized
-+22.43 ETH) — leaving only a **~91 ETH non-dust residual**, mostly long-held legacy
-degods. So the cross-venue economics are now largely reconstructed, not a black box:
-a small, consistently profitable OpenSea MM loop with a break-even Blur leg, sitting
-on stranded 2023 inventory.
+The **operating loop** — high-frequency bid-side trait/item making on three
+collections via two Seaport bots (cancel-and-replace on a short timer, re-anchor to
+floor ~1 h) — is **mechanically sound and near break-even in the 90-day window
+(−2.2 ETH cross-venue, 81% win)**. But the **full cross-venue P&L is −30.4 ETH gross
+all-time**, not the +21 ETH the OpenSea-only view implied: the complete on-chain Blur
+history surfaces the high-priced **degods/BAYC** legs that the OpenSea-only data hid.
+**Only the item bot (0x400f, +9.5 ETH) is profitable**; the trait bot and the
+(previously "idle") vault — which is in fact a **724-ETH Blur trader** — carried the
+directional losses, and the **−466 ETH unrealized legacy bag** compounds them. So the
+honest picture: a competent small MM loop wrapped around a **loss-making directional
+book**, the bulk of it stranded 2023 degods. **Hard limit:** bid *placement method*
+(bot/manual/script) is not determinable on-chain and is left unknown.

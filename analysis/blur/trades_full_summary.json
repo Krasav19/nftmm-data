@@ -1,0 +1,67 @@
+{
+ "method": "BETH-settlement scan + tx enrichment; ONLY txs with an NFT transfer kept as real trades; taker = tx.from == wallet; pool/Blend BETH moves excluded (see beth_pool_moves.jsonl)",
+ "real_nft_trades_total": 443,
+ "beth_pool_moves_excluded": 1855,
+ "os_blur_tx_overlap_deduped": 326,
+ "wallets": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+   "real_nft_trades": 121,
+   "buys": 71,
+   "sells": 50,
+   "taker_side": 75,
+   "maker_side": 46,
+   "buy_volume_eth": 498.8,
+   "sell_volume_eth": 219.22,
+   "top_collections": {
+    "degods-eth": 80,
+    "clonex": 15,
+    "mutant-ape-yacht-club": 8,
+    "pudgypenguins": 6,
+    "lilpudgys": 5,
+    "y00ts-eth": 4,
+    "azuki": 2,
+    "meebits": 1
+   }
+  },
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+   "real_nft_trades": 212,
+   "buys": 178,
+   "sells": 34,
+   "taker_side": 61,
+   "maker_side": 151,
+   "buy_volume_eth": 640.04,
+   "sell_volume_eth": 83.83,
+   "top_collections": {
+    "pudgypenguins": 62,
+    "doodles-official": 38,
+    "degods-eth": 37,
+    "lilpudgys": 27,
+    "persona": 14,
+    "clonex": 12,
+    "the-dooplicator": 8,
+    "sappy-seals": 6,
+    "mutant-ape-yacht-club": 3,
+    "azuki": 2
+   }
+  },
+  "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
+   "real_nft_trades": 110,
+   "buys": 71,
+   "sells": 39,
+   "taker_side": 57,
+   "maker_side": 53,
+   "buy_volume_eth": 582.59,
+   "sell_volume_eth": 141.59,
+   "top_collections": {
+    "pudgypenguins": 46,
+    "boredapeyachtclub": 37,
+    "sappy-seals": 10,
+    "lilpudgys": 6,
+    "clonex": 5,
+    "mutant-ape-yacht-club": 3,
+    "otherside-koda": 2,
+    "degods-eth": 1
+   }
+  }
+ }
+}

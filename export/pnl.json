@@ -1319,5 +1319,48 @@
    "BlurExchangeV2+BlurPool": 36,
    "blur-router": 8
   }
+ },
+ "cross_venue_full": {
+  "all": {
+   "trips": 924,
+   "pnl": -30.351,
+   "win": 66.1,
+   "median": 0.0111
+  },
+  "window_90d": {
+   "trips": 204,
+   "pnl": -2.215,
+   "win": 81.4,
+   "median": 0.022
+  },
+  "by_wallet": {
+   "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+    "trips": 300,
+    "pnl": 9.471,
+    "win": 71.3,
+    "median": 0.02
+   },
+   "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
+    "trips": 309,
+    "pnl": -24.491,
+    "win": 61.2,
+    "median": 0.007
+   },
+   "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+    "trips": 315,
+    "pnl": -15.332,
+    "win": 66.0,
+    "median": 0.0121
+   }
+  },
+  "by_venue_pair": {
+   "opensea->opensea": 684,
+   "blur->opensea": 127,
+   "blur->blur": 34,
+   "opensea->blur": 79
+  },
+  "orphan_sells": 109,
+  "open_lots": 202,
+  "note": "full OpenSea+Blur FIFO deduped by tx; supersedes 44-pair backfill"
  }
 }

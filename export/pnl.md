@@ -119,3 +119,23 @@ The Blur API request is still pending, so the entry leg of the 132 unmatched sel
 
 **Read:** the Blur leg is **roughly break-even** (+1.21 ETH over 44 round-trips) — it does not hide large profits or losses (one −8.29 ETH degods outlier aside). The earlier "384 ETH of unattributable Blur sells" is now **closed to ~91 ETH of non-dust residual**, mostly long-held legacy degods, not the active loop.
 
+
+---
+
+## 7. Full cross-venue P&L (OpenSea + Blur, complete on-chain backfill)
+
+Supersedes §6's 44-pair backfill. Full Blur history reconstructed on-chain (443 real Blur trades), merged with OpenSea sales and **deduped by tx hash** (326 Blur settlements also appeared as OpenSea "sales"). Cross-venue FIFO per (wallet, token):
+
+| scope | round-trips | realized P&L (ETH) | win rate | median/trip |
+|---|---|---|---|---|
+| all history | 924 | **-30.351** | 66.1% | 0.0111 |
+| 90-day active | 204 | **-2.215** | 81.4% | 0.022 |
+
+**Cross-venue flow:** 127 buy-Blur→sell-OpenSea + 79 buy-OpenSea→sell-Blur = 206 cross-venue round-trips (~22%).
+
+**By wallet:** 0x400f (item) **+9.5 ETH** (only profitable); 0x0282 (trait) −15.3; 0x8e8d (vault) −24.5.
+
+**Read:** the complete realized figure is **−30.4 ETH gross**, vs the OpenSea-only +21.2 — the difference is the high-priced **degods/bayc** legs that settled on Blur and pair into losing exits. The OpenSea-only view flattered the operator by hiding the directional losers. The 90-day active loop is near break-even (−2.2 ETH, 81% win). See `analysis/blur/BLUR_ANALYSIS.md`.
+
+> **Limitation:** bid *placement method* (bot/manual/script) is NOT determinable on-chain — recorded as unknown, not inferred.
+
