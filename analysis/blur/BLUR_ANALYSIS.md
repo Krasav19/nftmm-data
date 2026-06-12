@@ -39,26 +39,31 @@ Read-only on-chain reconstruction (public RPC). Blur settles in **BETH** (Blur P
 
 **Read:** **0x400f leans maker on Blur (151 maker / 61 taker)** — it rests bids and waits, consistent with its OpenSea bid-bot identity. **0x0282 leans taker (75/46)** and **0x8e8d is balanced (57/53)**. So the item bot is a passive liquidity provider on both venues; the trait bot and vault more often cross the spread to take.
 
-## 4. Full Blur-leg P&L (cross-venue FIFO)
+## 4. Active-loop P&L — strictly 90 days (cross-venue FIFO)
 
-Matching buys→sells per (wallet, token) across **both venues** (not just the 44 pairs from the first backfill), deduped by tx:
+**Focus = the last 90 days (window 2026-03-14 → 2026-06-12).** Everything older is legacy and is out of focus by construction (see footnote). The 90d ledger is split into three components so the active-strategy number is isolated from boundary effects (`pnl_90d.py` → `export/pnl_90d.json`):
 
-| scope | round-trips | realized P&L (ETH) | win rate | median/trip |
+| component | trips/lots | P&L (ETH) | win | note |
 |---|---|---|---|---|
-| all history | 924 | **-30.351** | 66.1% | 0.0111 |
-| 90-day window | 204 | **-2.215** | 81.4% | 0.022 |
+| **REALIZED 90d** (both legs in window) | 192 trips | **−1.886** | **82.8%** | the active loop |
+| OPEN / MTM 90d (bought in-window, unsold) | 18 lots | **−1.063** unrealized | — | floor-marked, current snapshot |
+| orphan-entry closed (buy *pre*-window) | 12 trips | −0.328 | 58.3% | **excluded** — legacy tail |
 
-**By wallet (all history, cross-venue):**
+**The clean active-loop figure is −1.89 ETH realized at 82.8% win** (192 fully-closed pairs with both legs inside the window). The earlier "−2.2 ETH / 204 trips / 81.4%" was that same realized set **with 12 orphan-entry trips mixed in** (buy before the window, sell inside): 192 + 12 = 204 trips, −1.886 + −0.328 = −2.214 ≈ −2.215. Those 12 are a legacy tail, not the active loop, so they are removed from the headline.
 
-| wallet | trips | realized P&L |
-|---|---|---|
-| 0x0282 (trait bot) | 315 | -15.332 ETH |
-| 0x400f (item bot) | 300 | +9.471 ETH |
-| 0x8e8d (vault) | 309 | -24.491 ETH |
+**Per wallet — 90d:**
 
-**Cross-venue round-trips:** buy-Blur→sell-OpenSea **127**, buy-OpenSea→sell-Blur **79** (= 206 cross-venue, 22% of trips); OpenSea→OpenSea 684, Blur→Blur 34.
+| wallet | realized 90d | win | open-MTM 90d |
+|---|---|---|---|
+| 0x0282 (trait bot) | **+2.229 ETH** (114 trips) | 86.0% | −0.557 (11 lots, cost 4.27) |
+| 0x400f (item bot) | **−3.924 ETH** (77 trips) | 79.2% | −0.506 (7 lots, cost 19.69) |
+| 0x8e8d (vault) | −0.192 ETH (1 trip) | 0% | none in 90d |
 
-**Read:** the *complete* realized P&L is **-30.4 ETH gross** — materially **worse** than the OpenSea-only +21.2 ETH, because Blur carried the high-priced **degods** buys that pair into losing exits. **0x400f (item bot) is the only profitable wallet (+9.5 ETH)**; the trait bot (−15.3) and vault (−24.5) lost on directional degods/bayc positions. The 90-day active loop is near break-even (−2.2 ETH, 81% win) — many small wins, a few large degods losers.
+**Read (90d active loop):** in the live window the *trait bot* (0x0282) is the earner (**+2.23 ETH, 86% win**) while the *item bot* (0x400f) is the drag (**−3.92 ETH**) — the reverse of the all-time ranking, because all-time is dominated by legacy degods/bayc that no longer trade. The vault is essentially inactive in-window (1 trip). Open inventory opened in-window is small and slightly underwater (**−1.06 ETH** unrealized on 24 ETH cost, ~95% of basis, mostly one off-floor lilpudgys lot per bot). Net active-loop position = **−1.89 ETH realized + −1.06 ETH open**.
+
+**Cross-venue round-trips (all-history context):** buy-Blur→sell-OpenSea **127**, buy-OpenSea→sell-Blur **79** (= 206 cross-venue, 22% of trips); OpenSea→OpenSea 684, Blur→Blur 34.
+
+> **Legacy, out of focus (footnote).** All-history cross-venue realized is **−30.35 ETH / 924 trips / 66.1% win** — by wallet 0x0282 −15.3, 0x400f +9.5, 0x8e8d −24.5. That number is dominated by 2023 **degods/bayc** legs that settled on Blur and have not traded in the window; it is recorded for completeness but is **not** the active strategy and is excluded from the 90d read above.
 
 ## 5. Residual blind spot after full backfill
 

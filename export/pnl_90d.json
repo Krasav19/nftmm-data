@@ -1,0 +1,266 @@
+{
+ "method": "cross-venue FIFO (OpenSea + on-chain Blur, deduped by tx). 90d trailing window; both legs in-window for realized; lots bought in-window marked to current floor for open/MTM.",
+ "window_start": "2026-03-14",
+ "as_of": "2026-06-12",
+ "floor_source": "2026-06-12T20:30:01Z",
+ "realized_90d_total": {
+  "trips": 192,
+  "pnl": -1.886,
+  "win": 82.8
+ },
+ "open_mtm_90d_total": {
+  "lots": 18,
+  "cost_basis": 23.96,
+  "floor_value": 22.897,
+  "unrealized": -1.063
+ },
+ "orphan_entry_closed_excluded": {
+  "trips": 12,
+  "pnl": -0.328,
+  "win": 58.3
+ },
+ "by_wallet": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+   "name": "0x0282 (trait bot)",
+   "realized_90d": {
+    "trips": 114,
+    "pnl": 2.229,
+    "win": 86.0
+   },
+   "open_mtm_90d": {
+    "lots": 11,
+    "cost_basis": 4.27,
+    "floor_value": 3.712,
+    "unrealized": -0.557
+   }
+  },
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+   "name": "0x400f (item bot)",
+   "realized_90d": {
+    "trips": 77,
+    "pnl": -3.924,
+    "win": 79.2
+   },
+   "open_mtm_90d": {
+    "lots": 7,
+    "cost_basis": 19.69,
+    "floor_value": 19.184,
+    "unrealized": -0.506
+   }
+  },
+  "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
+   "name": "0x8e8d (vault)",
+   "realized_90d": {
+    "trips": 1,
+    "pnl": -0.192,
+    "win": 0.0
+   },
+   "open_mtm_90d": {
+    "lots": 0,
+    "cost_basis": 0,
+    "floor_value": 0,
+    "unrealized": 0
+   }
+  }
+ },
+ "open_lots_90d": [
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "19543",
+   "buy": 0.342,
+   "venue": "opensea",
+   "buy_ts": 1780581023,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": -0.056
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "4248",
+   "buy": 0.342,
+   "venue": "opensea",
+   "buy_ts": 1780599179,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": -0.056
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "1798",
+   "buy": 0.342,
+   "venue": "opensea",
+   "buy_ts": 1780603703,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": -0.056
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "lilpudgys",
+   "token": "2924",
+   "buy": 0.9,
+   "venue": "blur",
+   "buy_ts": 1780644815,
+   "floor": 0.4748,
+   "mtm_value": 0.4748,
+   "unrealized": -0.4252
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "lilpudgys",
+   "token": "18801",
+   "buy": 0.425,
+   "venue": "blur",
+   "buy_ts": 1780879259,
+   "floor": 0.4748,
+   "mtm_value": 0.4748,
+   "unrealized": 0.0498
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "7844",
+   "buy": 0.282,
+   "venue": "opensea",
+   "buy_ts": 1780912847,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": 0.004
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "6080",
+   "buy": 0.283,
+   "venue": "opensea",
+   "buy_ts": 1780932347,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": 0.003
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "lilpudgys",
+   "token": "13844",
+   "buy": 0.44,
+   "venue": "opensea",
+   "buy_ts": 1780940819,
+   "floor": 0.4748,
+   "mtm_value": 0.4748,
+   "unrealized": 0.0348
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "11598",
+   "buy": 0.301,
+   "venue": "opensea",
+   "buy_ts": 1780988099,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": -0.015
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "15474",
+   "buy": 0.292,
+   "venue": "opensea",
+   "buy_ts": 1780989743,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": -0.006
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "lilpudgys",
+   "token": "2152",
+   "buy": 0.9058,
+   "venue": "blur",
+   "buy_ts": 1780996391,
+   "floor": 0.4748,
+   "mtm_value": 0.4748,
+   "unrealized": -0.431
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "lilpudgys",
+   "token": "17575",
+   "buy": 0.905,
+   "venue": "blur",
+   "buy_ts": 1780997855,
+   "floor": 0.4748,
+   "mtm_value": 0.4748,
+   "unrealized": -0.4302
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "lilpudgys",
+   "token": "9723",
+   "buy": 0.452,
+   "venue": "opensea",
+   "buy_ts": 1781007863,
+   "floor": 0.4748,
+   "mtm_value": 0.4748,
+   "unrealized": 0.0228
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "pudgypenguins",
+   "token": "47",
+   "buy": 4.38,
+   "venue": "blur",
+   "buy_ts": 1781014319,
+   "floor": 4.43999763999763,
+   "mtm_value": 4.44,
+   "unrealized": 0.06
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "pudgypenguins",
+   "token": "47",
+   "buy": 4.33,
+   "venue": "blur",
+   "buy_ts": 1781181707,
+   "floor": 4.43999763999763,
+   "mtm_value": 4.44,
+   "unrealized": 0.11
+  },
+  {
+   "wallet": "0x028296d8bf1995549d5b9446622cf565bbd0a26e",
+   "collection": "clonex",
+   "token": "7864",
+   "buy": 0.288,
+   "venue": "opensea",
+   "buy_ts": 1781027267,
+   "floor": 0.28599999,
+   "mtm_value": 0.286,
+   "unrealized": -0.002
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "pudgypenguins",
+   "token": "1381",
+   "buy": 4.37,
+   "venue": "blur",
+   "buy_ts": 1781128895,
+   "floor": 4.43999763999763,
+   "mtm_value": 4.44,
+   "unrealized": 0.07
+  },
+  {
+   "wallet": "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf",
+   "collection": "pudgypenguins",
+   "token": "3454",
+   "buy": 4.38,
+   "venue": "blur",
+   "buy_ts": 1781254475,
+   "floor": 4.43999763999763,
+   "mtm_value": 4.44,
+   "unrealized": 0.06
+  }
+ ]
+}

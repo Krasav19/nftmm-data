@@ -5,13 +5,15 @@
 limited to a 3-day pull; **153 order-book snapshots** every 15 min
 (2026-06-10 20:30Z → 2026-06-12 10:15Z) for delta analysis.
 
-> **Scope & limits (read first).** Everything here is the **OpenSea side only**.
-> The operator also trades on **Blur**, which is invisible to this data — in the
-> live 90-day window **2.5% of sells have no visible buy** (Blur entries), and the
-> historical share is much larger. P&L is **gross** of gas/fees. A **legacy bag of
-> −466 ETH unrealized** (mostly 2023 DeGods/BAYC) sits outside the active loop and
-> is treated as context, not the operating business. Treat all economics as
-> OpenSea-attributable lower bounds, not a closed cross-venue ledger.
+> **Scope & focus (read first).** The headline of this report is the **active loop
+> over the last 90 days** (window 2026-03-14 → 2026-06-12): **−1.89 ETH realized at
+> 82.8% win, 192 cross-venue round-trips** (§9). **P&L is cross-venue** — OpenSea API
+> v2 plus the full on-chain Blur history (`blur_full.py`), deduped by tx — and gross of
+> gas/fees. Behavioural sections (§3–§7) are OpenSea-side observations (offers/snapshots
+> live there). **Everything older than 90 days is legacy and out of focus:** the
+> all-time −30.4 ETH cross-venue and the **−466 ETH unrealized bag** (mostly 2023
+> DeGods/BAYC) sit *outside* the active loop and are kept only as a footnote, not the
+> operating business.
 
 Backing detail: `export/REPORT_v2.md` (active-loop), `export/pnl.md`,
 `export/mtm.md`, `export/trait_analysis.md`, `analysis/delta/DELTA_REPORT.md`.
@@ -94,10 +96,11 @@ via **accepting bids / Blur**, not standing OpenSea asks.
   (median 4 snapshots)** — it re-bases bids on a slower cadence than its 10–30 min
   quote refresh, i.e. a floor-anchored target updated lazily rather than tick-chasing.
   (The unfiltered 25% figure was diluted by collections it doesn't trade.)
-- **Risk posture:** active book is **small and near-flat** — 16 fresh (<90 d) lots,
-  9.8 ETH at entry, **+0.08 ETH unrealized**. Short holds, sub-floor entries, and
-  trait premiums only on rares are all conservative. **The risk that did blow up was
-  legacy directional holding**, not the MM loop (see §9).
+- **Risk posture:** active book is **small and near-flat** — 18 fresh (<90 d) lots
+  opened in-window, **24 ETH at entry, −1.06 ETH unrealized** at current floor
+  (cross-venue; the earlier +0.08 ETH was OpenSea-only and pre-Blur). Short holds,
+  sub-floor entries, and trait premiums only on rares are all conservative. **The risk
+  that did blow up was legacy directional holding**, not the MM loop (see §9).
 
 ## 7. Bot architecture (reconstructed, with real timings)
 
@@ -140,59 +143,75 @@ via **accepting bids / Blur**, not standing OpenSea asks.
 | `0x400f2b…e3cf` | **item-offer bot** — 76.7k per-token ladder bids, Pudgy/LilPudgys |
 | `0x8e8d62…e062` | **vault / two-sided trader, idle since 2026-04-27** — flat net inventory, **no NFT transfers shared with the bidder bots**, never lists; a separate book, not the bots' custody |
 
-## 9. P&L
+## 9. P&L — the active loop, strictly 90 days
 
-**Realized (FIFO, gross). The full cross-venue figure (OpenSea + complete on-chain
-Blur, deduped by tx) supersedes the OpenSea-only view:**
+**The headline number of this report is the realized P&L of the active loop over the
+last 90 days** (window **2026-03-14 → 2026-06-12**), cross-venue (OpenSea + complete
+on-chain Blur, deduped by tx), FIFO, gross of gas/fees. Everything older — the
+all-time −30.4 ETH, the 2023 degods/BAYC legs, the −466 ETH legacy inventory — is a
+legacy tail and is moved to the footnote below; it is **not** the operating business.
 
-| scope | round-trips | realized P&L | win rate |
+The 90d ledger is split into three components so the active number is isolated from
+boundary effects (`pnl_90d.py` → `export/pnl_90d.json`):
+
+| component | trips / lots | P&L (ETH) | win | counts as |
+|---|---|---|---|---|
+| **REALIZED 90d** (both legs in window) | **192 trips** | **−1.89** | **82.8%** | **the active loop** |
+| OPEN / MTM 90d (bought in-window, unsold) | 18 lots | −1.06 unrealized | — | open risk |
+| orphan-entry closed (buy *pre*-window) | 12 trips | −0.33 | 58.3% | excluded (legacy tail) |
+
+**Clarifying the −2.2 ETH:** that earlier figure was realized-90d **with orphan-entry
+contamination**. It summed the 192 clean trips (−1.886) with 12 closed trips whose
+*buy was before the window* (−0.328) → 204 trips, −2.214 ≈ −2.215, win 81.4%. Those 12
+are a legacy-tail entry, not the active loop. **Removing them, the clean realized 90d
+of the active loop is −1.89 ETH at 82.8% win** (the win rate is *higher*, 82.8% vs the
+mixed 81.4%, because the orphan-entry trips were mostly losers).
+
+**Per wallet — 90d (the live ranking, which inverts the all-time one):**
+
+| wallet | realized 90d | win | open-MTM 90d |
 |---|---|---|---|
-| OpenSea-only, all history | 874 | +21.22 ETH | 67.3% |
-| **cross-venue, all history** | **924** | **−30.35 ETH** | 66.1% |
-| **cross-venue, 90 d active** | **204** | **−2.22 ETH** | 81.4% |
+| **0x0282 (trait bot)** | **+2.23 ETH** (114 trips) | 86.0% | −0.56 (11 lots, cost 4.3) |
+| 0x400f (item bot) | **−3.92 ETH** (77 trips) | 79.2% | −0.51 (7 lots, cost 19.7) |
+| 0x8e8d (vault) | −0.19 ETH (1 trip) | 0% | none in 90d |
 
-The OpenSea-only +21 ETH was **misleadingly positive**: it omitted the high-priced
-**degods/BAYC** buys that settled on **Blur** and pair into losing exits. With both
-venues, realized is **−30.4 ETH gross** all-time. **By wallet (cross-venue):
-0x400f (item bot) +9.5 ETH is the only profitable one**; 0x0282 (trait) −15.3 and
-0x8e8d (vault) −24.5 carried the directional degods/bayc losses. ~22% of round-trips
-are cross-venue (buy one venue, sell the other). The 90-day active loop is
-**near break-even (−2.2 ETH, 81% win)** — many small wins, a few large degods losers.
+In the live window the **trait bot 0x0282 is the earner (+2.23 ETH, 86% win)** and the
+**item bot 0x400f is the drag (−3.92 ETH)** — the *reverse* of the all-time ranking,
+which is dominated by stale degods/bayc. The vault is effectively inactive in-window
+(1 trip). So the active loop nets **−1.89 ETH realized + −1.06 ETH open** ≈ −2.95 ETH
+mark-to-market on a 90-day book — one bot solidly profitable, one carrying recent
+losses, on small size (24 ETH of in-window open cost basis).
 
-**Resolved — 0x0282 (trait bot) economics do NOT close on Blur.** The earlier open
-question ("its OpenSea −1.8 ETH must be rescued on Blur") is now answered by the full
-on-chain Blur history: cross-venue, **0x0282 is −15.3 ETH**, not break-even. The Blur
-leg made it *worse*, not better, because the trait bot's degods/clonex Blur buys pair
-into losing exits. So the **accumulation-feeder** reading is the right one over the
-hidden-profit one: 0x0282 sources rare-trait/directional inventory (it leans **taker
-on Blur**, 75/46) that the operator then carries — and much of that inventory is the
-underwater degods bag. It is a **cost centre feeding the book**, not a self-funding
-scalper. (The first 44-pair backfill suggested ~break-even; the *complete* 443-trade
-history corrects that to clearly negative.)
+**Open / MTM 90d detail:** the 18 lots opened in-window mark to **−1.06 ETH** against a
+24 ETH cost basis (~96% of basis at floor). It is small and near-flat; the drag is two
+above-floor lilpudgys lots (one per bot, ~0.9 ETH entry vs 0.47 floor). Short holds,
+sub-floor entries, trait premiums only on rares — conservative, as before.
 
-**Unrealized (mark-to-floor, conservative):** open inventory **−466 ETH**, but this
-is **legacy**: 119 of 174 lots are >1 year old, dominated by **DeGods −262 ETH**
-(2023 buys ~10 ETH, floor verified 0.17, same contract — real, not an artifact) and
-**BAYC −41 ETH**. The **active <90 d book is ~flat (+0.08 ETH)**.
-
-**Blur backfill (on-chain):** of the 132 off-platform sells (384 ETH), **44 entries
-recovered** → combined realized **+22.43 ETH** over 918 trips; the Blur leg is
-**~break-even (+1.21 ETH)**. Residual blind spot shrinks to **15 non-dust sells /
-91 ETH** (zero on-chain payment on the inbound — cross-wallet/claims/pre-window) plus
-73 bitmappunks dust. See `export/pnl.md` §6.
+> **Legacy, out of focus (footnote — not the active strategy).**
+> *All-time cross-venue realized* is **−30.35 ETH / 924 trips / 66.1% win** (by wallet:
+> 0x0282 −15.3, 0x400f +9.5, 0x8e8d −24.5). The OpenSea-only view (+21.2 ETH / 874
+> trips) was misleadingly positive — it omitted the high-priced degods/BAYC buys that
+> settled on Blur and pair into losing exits. *Unrealized legacy inventory* marks to
+> **−466 ETH** (174 lots, 119 of them >1 yr old; DeGods −262, BAYC −41). These
+> all-time figures are dominated by 2023 directional positions that no longer trade in
+> the window; they are recorded for completeness only. Note the all-time wallet
+> ranking (0x400f the only profitable one; 0x0282/0x8e8d the losers) is a *legacy*
+> ranking — in the live 90d loop it inverts (above).
 
 ---
 
 ### Bottom line
-The **operating loop** — high-frequency bid-side trait/item making on three
-collections via two Seaport bots (cancel-and-replace on a short timer, re-anchor to
-floor ~1 h) — is **mechanically sound and near break-even in the 90-day window
-(−2.2 ETH cross-venue, 81% win)**. But the **full cross-venue P&L is −30.4 ETH gross
-all-time**, not the +21 ETH the OpenSea-only view implied: the complete on-chain Blur
-history surfaces the high-priced **degods/BAYC** legs that the OpenSea-only data hid.
-**Only the item bot (0x400f, +9.5 ETH) is profitable**; the trait bot and the
-(previously "idle") vault — which is in fact a **724-ETH Blur trader** — carried the
-directional losses, and the **−466 ETH unrealized legacy bag** compounds them. So the
-honest picture: a competent small MM loop wrapped around a **loss-making directional
-book**, the bulk of it stranded 2023 degods. **Hard limit:** bid *placement method*
-(bot/manual/script) is not determinable on-chain and is left unknown.
+The **active loop** — high-frequency bid-side trait/item making on three collections
+via two Seaport bots (cancel-and-replace on a short timer, re-anchor to floor ~1 h) —
+is, **strictly over the last 90 days, −1.89 ETH realized at 82.8% win across 192
+fully-closed cross-venue round-trips**, plus −1.06 ETH of open inventory at floor. It
+is **mechanically sound and roughly break-even**: a high-volume, high-win-rate scalp
+where the realized loss is a handful of large legs against many small wins. In the live
+window the **trait bot 0x0282 is the earner (+2.23 ETH, 86%)** and the **item bot
+0x400f is the recent drag (−3.92 ETH)** — the inverse of the all-time ranking. The
+old "−2.2 ETH" headline was that same loop with 12 orphan-entry (legacy-tail) trips
+mixed in; removing them gives the clean −1.89. **Everything older is out of focus:**
+all-time cross-venue P&L is −30.4 ETH gross with a −466 ETH unrealized legacy degods/
+BAYC bag, but that is stranded 2023 directional inventory, not the operating loop (see
+§9 footnote). **Hard limit:** bid *placement method* (bot/manual/script) is not
+determinable on-chain and is left unknown.
