@@ -2,32 +2,32 @@
  "_definition": "'top' = operator's best realistic bid (<=2x floor) >= best competing collection-wide bid (<=2x floor). For the trait bot this compares a trait-specific bid to collection-wide demand, so 'not top' often just means a competitor posted a higher collection-wide offer, not that the operator was out-bid on its actual trait. Most meaningful for the item bot on pudgypenguins.",
  "by_collection": {
   "pudgypenguins": {
-   "snaps_with_our_bid": 153,
+   "snaps_with_our_bid": 156,
    "pct_we_are_top": 0.0,
    "median_gap_below_top_pct_floor": 50.68,
    "p90_gap_below_top_pct_floor": 69.57
   },
   "clonex": {
-   "snaps_with_our_bid": 153,
+   "snaps_with_our_bid": 156,
    "pct_we_are_top": 0.0,
    "median_gap_below_top_pct_floor": 81.72,
-   "p90_gap_below_top_pct_floor": 84.82
+   "p90_gap_below_top_pct_floor": 84.81
   },
   "lilpudgys": {
-   "snaps_with_our_bid": 150,
+   "snaps_with_our_bid": 153,
    "pct_we_are_top": 0.0,
    "median_gap_below_top_pct_floor": 9.38,
-   "p90_gap_below_top_pct_floor": 19.96
+   "p90_gap_below_top_pct_floor": 19.93
   },
   "doodles-official": {
-   "snaps_with_our_bid": 150,
-   "pct_we_are_top": 61.3,
+   "snaps_with_our_bid": 153,
+   "pct_we_are_top": 62.1,
    "median_gap_below_top_pct_floor": 86.86,
    "p90_gap_below_top_pct_floor": 88.87
   },
   "azuki": {
-   "snaps_with_our_bid": 147,
-   "pct_we_are_top": 68.7,
+   "snaps_with_our_bid": 150,
+   "pct_we_are_top": 68.0,
    "median_gap_below_top_pct_floor": 88.75,
    "p90_gap_below_top_pct_floor": 91.11
   },
@@ -40,11 +40,11 @@
  },
  "by_kind": {
   "item": {
-   "snaps": 153,
+   "snaps": 156,
    "pct_top": 0.0
   },
   "trait": {
-   "snaps": 645,
+   "snaps": 657,
    "pct_top": 31.8
   }
  }

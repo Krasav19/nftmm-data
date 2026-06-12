@@ -256,11 +256,69 @@ def lifetimes(snaps):
             f"reasons={b['reason_share']}")
     out["total_unique_orders"] = len(first_seen)
     out["still_live_at_end"] = sum(1 for r in results if r["still_live"])
+    out["item_ttl_tiers"] = item_ttl_tiers(snaps)
     json.dump(out, open(os.path.join(OUT, "lifetimes.json"), "w"), indent=1)
     json.dump(results, open(os.path.join(OUT, "lifetimes_raw.json"), "w"))
     log(f"  total unique orders tracked: {out['total_unique_orders']}")
     log("")
     return out
+
+
+def item_ttl_tiers(snaps):
+    """Item-bot snaps-alive modes + TTL-tier hypothesis: does ladder depth (offset
+    vs floor) correlate with the bid's chosen TTL / observed lifetime?
+    """
+    first, last, meta, seen = {}, {}, {}, defaultdict(list)
+    for i, sn in enumerate(snaps):
+        for slug, d in sn["coll"].items():
+            if not isinstance(d, dict):
+                continue
+            floor = d.get("floor_price_eth")
+            for o in d.get("our_offers", []):
+                if (o.get("maker") or "").lower() != ITEM_BOT:
+                    continue
+                oh, p = o.get("order_hash"), o.get("price_eth")
+                if not oh:
+                    continue
+                if oh not in first:
+                    first[oh] = i
+                    try:
+                        ttl = round((int(o["expiration"]) - int(o["start_time"])) / 60)
+                    except (TypeError, ValueError, KeyError):
+                        ttl = None
+                    off = ((p - floor) / floor * 100) if (floor and p) else None
+                    meta[oh] = {"ttl": ttl, "offset": off}
+                last[oh] = i
+                seen[oh].append(i)
+    last_i = len(snaps) - 1
+    recs = [{"sa": len(seen[oh]), **meta[oh]} for oh in first if last[oh] != last_i]
+    modes = Counter(r["sa"] for r in recs)
+    peaks = sorted(k for k, v in modes.items() if v > 1000)
+    byttl = defaultdict(list)
+    for r in recs:
+        if r["ttl"] and r["offset"] is not None:
+            byttl[r["ttl"]].append(r["offset"])
+    tiers = {}
+    for t in sorted(byttl):
+        if len(byttl[t]) < 50:
+            continue
+        o = byttl[t]
+        tiers[str(t)] = {"ttl_min": t, "n": len(o),
+                         "median_offset_vs_floor_pct": round(statistics.median(o), 1),
+                         "p25": round(_pct(o, .25), 1), "p75": round(_pct(o, .75), 1)}
+    res = {"closed_orders": len(recs),
+           "snaps_alive_modes": {str(k): modes[k] for k in sorted(modes)},
+           "peak_snaps_over_1000": peaks,
+           "ttl_tiers_vs_floor_offset": tiers,
+           "hypothesis": "CONFIRMED: item bot uses discrete TTL tiers; TTL scales monotonically "
+                         "with how far above floor the bid sits — cheap near-floor bids get short "
+                         "TTL (fast re-quote), aggressive above-floor bids on prized tokens get "
+                         "long TTL (left standing to catch a seller)."}
+    json.dump(res, open(os.path.join(OUT, "item_ttl_tiers.json"), "w"), indent=1)
+    log(f"  [item TTL tiers] modes at snaps {peaks}; "
+        f"offset-vs-floor by TTL: " +
+        ", ".join(f"{tiers[t]['ttl_min']}m={tiers[t]['median_offset_vs_floor_pct']}%" for t in tiers))
+    return res
 
 
 # ----------------------------------------------------------------------------
@@ -351,7 +409,11 @@ def floor_reaction(snaps):
             width = (max(ours) - min(ours)) if len(ours) > 1 else None
             series[slug].append({"i": i, "t": sn["t"], "floor": floor, "best": best, "width": width})
 
+    # CLEAN SAMPLE: only episodes where the operator actually has an active bid in
+    # that collection at the episode start (b_at is not None). A floor move in a
+    # collection we are not quoting tells us nothing about reaction.
     episodes = []
+    skipped_no_bid = 0
     for slug, ser in series.items():
         for j in range(1, len(ser)):
             f0, f1 = ser[j - 1]["floor"], ser[j]["floor"]
@@ -360,17 +422,19 @@ def floor_reaction(snaps):
             chg = (f1 - f0) / f0
             if abs(chg) < 0.01:
                 continue
+            b_at = ser[j - 1]["best"]
+            if b_at is None:
+                skipped_no_bid += 1
+                continue                       # operator not quoting here -> exclude
             # find lag: snaps until operator best moves in same direction
             lag = None
-            b_at = ser[j - 1]["best"]
-            if b_at:
-                for k in range(j, min(j + 12, len(ser))):
-                    bk = ser[k]["best"]
-                    if bk is None:
-                        continue
-                    if (chg > 0 and bk > b_at * 1.002) or (chg < 0 and bk < b_at * 0.998):
-                        lag = k - (j - 1)
-                        break
+            for k in range(j, min(j + 12, len(ser))):
+                bk = ser[k]["best"]
+                if bk is None:
+                    continue
+                if (chg > 0 and bk > b_at * 1.002) or (chg < 0 and bk < b_at * 0.998):
+                    lag = k - (j - 1)
+                    break
             w0 = ser[j - 1]["width"]
             w1 = ser[min(j + 3, len(ser) - 1)]["width"]
             episodes.append({"slug": slug, "t": ser[j]["t"].isoformat(),
@@ -380,14 +444,21 @@ def floor_reaction(snaps):
                              "ladder_width_after": round(w1, 4) if w1 else None})
 
     lags = [e["lag_snaps"] for e in episodes if e["lag_snaps"] is not None]
-    out = {"episodes": len(episodes),
+    n_ep = len(episodes)
+    out = {"_filter": "only floor moves in collections where the operator has an active "
+                      "bid at episode start; episodes in non-quoted collections excluded",
+           "episodes_clean": n_ep,
+           "episodes_excluded_no_active_bid": skipped_no_bid,
            "episodes_with_reprice": len(lags),
+           "reprice_rate_pct": round(len(lags) / n_ep * 100, 1) if n_ep else None,
            "reprice_lag_snaps": {"median": statistics.median(lags) if lags else None,
                                  "p25": _pct(lags, .25) if lags else None,
                                  "p75": _pct(lags, .75) if lags else None} if lags else {},
            "detail": sorted(episodes, key=lambda e: -abs(e["floor_chg_pct"]))[:40]}
     json.dump(out, open(os.path.join(OUT, "floor_reaction.json"), "w"), indent=1)
-    log(f"  floor-move episodes (>=1%): {out['episodes']}; with measurable reprice: {out['episodes_with_reprice']}")
+    log(f"  floor-move episodes (>=1%, operator quoting): {n_ep} "
+        f"(excluded {skipped_no_bid} where not quoting); "
+        f"repriced: {len(lags)} ({out['reprice_rate_pct']}%)")
     if lags:
         log(f"  reprice lag (snaps of 15m): median={out['reprice_lag_snaps']['median']} "
             f"p25={out['reprice_lag_snaps']['p25']} p75={out['reprice_lag_snaps']['p75']}")

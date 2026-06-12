@@ -77,10 +77,12 @@ via **accepting bids / Blur**, not standing OpenSea asks.
 
 ## 6. Floor reaction & risk management
 
-- **Reaction lag:** of 36 floor moves ≥1%, the operator repriced in the same
-  direction in only ~25%, and when it did the **lag was ~1 h (median 4 snapshots)** —
-  it re-bases bids on a slower cadence than its 10–30 min quote refresh, i.e. a
-  floor-anchored target that updates lazily rather than chasing every tick.
+- **Reaction lag (clean sample):** of 36 floor moves ≥1%, **22 were in collections
+  the operator wasn't quoting** and are excluded. On the **14 episodes where it held
+  an active bid, it repriced in the same direction ~64%** of the time, **lag ~1 h
+  (median 4 snapshots)** — it re-bases bids on a slower cadence than its 10–30 min
+  quote refresh, i.e. a floor-anchored target updated lazily rather than tick-chasing.
+  (The unfiltered 25% figure was diluted by collections it doesn't trade.)
 - **Risk posture:** active book is **small and near-flat** — 16 fresh (<90 d) lots,
   9.8 ETH at entry, **+0.08 ETH unrealized**. Short holds, sub-floor entries, and
   trait premiums only on rares are all conservative. **The risk that did blow up was
@@ -90,17 +92,34 @@ via **accepting bids / Blur**, not standing OpenSea asks.
 
 - **Two independent quoting engines**, one per wallet, each Seaport-based:
   - *Trait engine (0x0282):* enumerates traits per collection (CloneX, LilPudgys),
-    posts one collection-criteria offer per trait, **TTL ~10–30 min**, **replace
-    cycle ≈ every 15 min or faster** (57% of bids replaced same-trait at a new
-    price; 1 s inter-offer spacing → a full trait sweep posts in seconds).
+    posts one collection-criteria offer per trait, **short TTL**, **replace cycle
+    fast** (57.6% of bids replaced same-trait at a new price; 1 s inter-offer
+    spacing → a full trait sweep posts in seconds). 97.6% of trait bids turn over
+    inside one 15-min snapshot.
   - *Item engine (0x400f):* enumerates desirable token IDs on PudgyPenguins/
-    LilPudgys, posts **laddered per-token bids** (228 tokens multi-priced), longer
-    TTL (median ~45 min alive), 2 s spacing.
-- **Refresh, not chase:** bids are re-posted on a fixed short timer (replace/expire
-  dominate; ~0 in-grid fills), while *price* re-basing to floor is lazier (~1 h lag).
-  Classic "cancel-and-replace on a timer, re-anchor on floor drift" maker loop.
-- **Order TTL window** observed 15 min–8 h (median 4 h on the standing book), with
-  the high-churn layer turning over inside the 15-min sampling floor.
+    LilPudgys, posts **laddered per-token bids** (228 tokens multi-priced), 2 s
+    spacing — and runs a **coupled price×TTL scheme** (below):
+- **TTL tiers (measured, new).** The item bot uses **discrete TTL tiers
+  (60/120/150/180/240/360/480 min)**, and TTL scales **monotonically with how far
+  above floor the bid sits**:
+
+  | TTL | median offset vs floor |
+  |---|---|
+  | 60 min | −1.9% (below floor) |
+  | 150 min | −0.4% |
+  | 240 min | +5.0% |
+  | 360–480 min | +14.7% / +15.7% |
+
+  So cheap near-floor bids get **short TTL** (re-quoted fast as the floor drifts),
+  while aggressive above-floor bids on prized tokens get **long TTL** (left standing
+  to catch a motivated seller). This is a deliberate **two-axis quoting design**, not
+  a flat ladder — the snaps-alive distribution is multi-modal with peaks at exactly
+  these tiers.
+- **Refresh, not chase:** bids re-post on a fixed short timer (replace/expire
+  dominate; ~0 in-grid fills), while *price* re-basing to floor is lazier. When the
+  operator is actually quoting a collection, it repriced after **~64% of ≥1% floor
+  moves at ~1 h lag** (median 4 snaps) — reactive, but slower than its quote-refresh
+  cadence. Classic "cancel-and-replace on a timer, re-anchor on floor drift" loop.
 
 ## 8. Wallet roles
 
@@ -122,6 +141,22 @@ via **accepting bids / Blur**, not standing OpenSea asks.
 By bot: **0x400f +19.5 ETH (71.8% win)** is the engine; 0x8e8d +3.5; **0x0282 −1.8**
 (wins often, tiny margins). Top trade +3.0 ETH (pudgy 7105 8.48→11.48); worst −2.31
 (degods 1580).
+
+**Hypothesis — 0x0282 (trait bot) is not a standalone profit centre.** On the
+OpenSea-visible data it is **−1.8 ETH realized with ~0% on-grid fills** despite
+45.6k trait bids — i.e. its economics don't close on OpenSea. Two readings, both
+consistent with the data:
+1. **Blur-closed economics** — the trait bot's fills/exits happen on Blur (invisible
+   here), so its true P&L is unmeasured rather than negative. The 2.5% live / large
+   historical Blur blind spot sits exactly where its missing fills would be.
+2. **Accumulation feeder** — it isn't meant to flip; it sources rare-trait inventory
+   at/near floor into the operator's shared book, with monetisation realised
+   elsewhere (item-bot resale, Blur, or longer-horizon holding). The 57.6% replace /
+   42.4% expire churn with near-floor pricing fits "keep a standing rare-trait bid
+   wall" more than "scalp a spread."
+
+Either way, **0x0282's −1.8 ETH should not be read as a losing strategy**; it is the
+OpenSea-only slice of a bot whose payoff is realised off this dataset.
 
 **Unrealized (mark-to-floor, conservative):** open inventory **−466 ETH**, but this
 is **legacy**: 119 of 174 lots are >1 year old, dominated by **DeGods −262 ETH**

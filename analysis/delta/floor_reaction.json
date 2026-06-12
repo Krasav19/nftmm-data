@@ -1,45 +1,15 @@
 {
- "episodes": 36,
+ "_filter": "only floor moves in collections where the operator has an active bid at episode start; episodes in non-quoted collections excluded",
+ "episodes_clean": 14,
+ "episodes_excluded_no_active_bid": 22,
  "episodes_with_reprice": 9,
+ "reprice_rate_pct": 64.3,
  "reprice_lag_snaps": {
   "median": 4,
   "p25": 1.0,
   "p75": 5.0
  },
  "detail": [
-  {
-   "slug": "the-dooplicator",
-   "t": "2026-06-12T09:30:01",
-   "floor_from": 0.0079999,
-   "floor_to": 0.00947,
-   "floor_chg_pct": 18.38,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "persona",
-   "t": "2026-06-11T19:30:01",
-   "floor_from": 0.0199989,
-   "floor_to": 0.0221529,
-   "floor_chg_pct": 10.77,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "persona",
-   "t": "2026-06-11T21:00:01",
-   "floor_from": 0.0221529,
-   "floor_to": 0.0199989,
-   "floor_chg_pct": -9.72,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
   {
    "slug": "otherside-koda",
    "t": "2026-06-11T13:00:01",
@@ -52,83 +22,6 @@
    "ladder_width_after": null
   },
   {
-   "slug": "sappy-seals",
-   "t": "2026-06-11T19:30:01",
-   "floor_from": 0.085,
-   "floor_to": 0.08965564,
-   "floor_chg_pct": 5.48,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "otherside-koda",
-   "t": "2026-06-11T12:45:01",
-   "floor_from": 0.749999,
-   "floor_to": 0.709999,
-   "floor_chg_pct": -5.33,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "moonbirds",
-   "t": "2026-06-11T14:00:02",
-   "floor_from": 0.644884,
-   "floor_to": 0.67715,
-   "floor_chg_pct": 5.0,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "moonbirds",
-   "t": "2026-06-11T10:30:01",
-   "floor_from": 0.65,
-   "floor_to": 0.679437,
-   "floor_chg_pct": 4.53,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "moonbirds",
-   "t": "2026-06-11T13:15:01",
-   "floor_from": 0.677711,
-   "floor_to": 0.649999,
-   "floor_chg_pct": -4.09,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "degods-eth",
-   "t": "2026-06-11T15:00:02",
-   "floor_from": 0.17,
-   "floor_to": 0.174888,
-   "floor_chg_pct": 2.88,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "degods-eth",
-   "t": "2026-06-12T01:15:01",
-   "floor_from": 0.175,
-   "floor_to": 0.18,
-   "floor_chg_pct": 2.86,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
    "slug": "azuki",
    "t": "2026-06-11T08:30:01",
    "floor_from": 0.809,
@@ -137,39 +30,6 @@
    "lag_snaps": 4,
    "lag_min": 60,
    "ladder_width_before": 0.013,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "otherside-koda",
-   "t": "2026-06-11T10:30:01",
-   "floor_from": 0.768999,
-   "floor_to": 0.749999,
-   "floor_chg_pct": -2.47,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "degods-eth",
-   "t": "2026-06-11T21:45:02",
-   "floor_from": 0.179,
-   "floor_to": 0.175,
-   "floor_chg_pct": -2.23,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-11T13:45:01",
-   "floor_from": 8.96,
-   "floor_to": 8.7699999999999,
-   "floor_chg_pct": -2.12,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
    "ladder_width_after": null
   },
   {
@@ -228,17 +88,6 @@
    "ladder_width_after": 1.14
   },
   {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-11T14:15:02",
-   "floor_from": 8.82,
-   "floor_to": 8.9799999999999,
-   "floor_chg_pct": 1.81,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
    "slug": "pudgypenguins",
    "t": "2026-06-11T20:00:01",
    "floor_from": 4.46999999999999,
@@ -283,28 +132,6 @@
    "ladder_width_after": 1.14
   },
   {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-11T10:00:01",
-   "floor_from": 8.849,
-   "floor_to": 8.98,
-   "floor_chg_pct": 1.48,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-11T09:30:01",
-   "floor_from": 8.98,
-   "floor_to": 8.849,
-   "floor_chg_pct": -1.46,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
    "slug": "azuki",
    "t": "2026-06-11T08:45:01",
    "floor_from": 0.789,
@@ -313,17 +140,6 @@
    "lag_snaps": null,
    "lag_min": null,
    "ladder_width_before": 0.013,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-11T19:45:01",
-   "floor_from": 8.84,
-   "floor_to": 8.95,
-   "floor_chg_pct": 1.24,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
    "ladder_width_after": null
   },
   {
@@ -336,61 +152,6 @@
    "lag_min": 15,
    "ladder_width_before": 0.012,
    "ladder_width_after": 0.02
-  },
-  {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-11T16:15:01",
-   "floor_from": 8.96,
-   "floor_to": 8.85,
-   "floor_chg_pct": -1.23,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "degods-eth",
-   "t": "2026-06-11T19:45:01",
-   "floor_from": 0.1769,
-   "floor_to": 0.179,
-   "floor_chg_pct": 1.19,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "boredapeyachtclub",
-   "t": "2026-06-12T10:15:02",
-   "floor_from": 8.95,
-   "floor_to": 8.849,
-   "floor_chg_pct": -1.13,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "mutant-ape-yacht-club",
-   "t": "2026-06-10T22:30:01",
-   "floor_from": 1.34,
-   "floor_to": 1.3549,
-   "floor_chg_pct": 1.11,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
-  },
-  {
-   "slug": "degods-eth",
-   "t": "2026-06-11T17:45:01",
-   "floor_from": 0.175,
-   "floor_to": 0.1769,
-   "floor_chg_pct": 1.09,
-   "lag_snaps": null,
-   "lag_min": null,
-   "ladder_width_before": null,
-   "ladder_width_after": null
   },
   {
    "slug": "pudgypenguins",
