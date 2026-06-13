@@ -1,0 +1,32 @@
+{
+ "0x400f|pudgypenguins": {
+  "in": 118,
+  "out": 117,
+  "held_now": [
+   1381
+  ],
+  "held_count": 1
+ },
+ "0x0282|clonex": {
+  "in": 108,
+  "out": 101,
+  "held_now": [
+   1798,
+   4248,
+   7864,
+   11598,
+   12054,
+   15474,
+   19543
+  ],
+  "held_count": 7
+ },
+ "0x0282|lilpudgys": {
+  "in": 92,
+  "out": 91,
+  "held_now": [
+   16549
+  ],
+  "held_count": 1
+ }
+}
