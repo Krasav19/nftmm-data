@@ -6,3 +6,5 @@ __pycache__/
 *.pyc
 *.log
 private/
+analysis/logcache/
+analysis/receipt_value_cache.json
