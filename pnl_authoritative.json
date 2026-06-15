@@ -1,7 +1,7 @@
 {
  "window_90d_start": "2026-03-17",
  "as_of": "2026-06-15",
- "floor_source": "2026-06-15T16:45:01Z",
+ "floor_source": "2026-06-15T20:45:01Z",
  "by_wallet": {
   "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
    "name": "0x0282 (trait bot)",
@@ -69,22 +69,22 @@
      "collection": "lilpudgys",
      "token": "16549",
      "basis": 0.4615,
-     "floor": 0.52189999999999,
-     "unreal": 0.06039999999999002
+     "floor": 0.49374179,
+     "unreal": 0.03224178999999999
     },
     {
      "collection": "otherside-koda",
      "token": "8369",
      "basis": 0.6475,
-     "floor": 0.72999999,
-     "unreal": 0.08249999000000008
+     "floor": 0.72499999,
+     "unreal": 0.07749999000000007
     }
    ],
    "mtm_basis": 3.3055,
-   "mtm_floor": 3.2469,
-   "mtm_unreal": -0.0586,
-   "unpriced_out_n": 16,
-   "unpriced_out_basis": 111.739
+   "mtm_floor": 3.2137,
+   "mtm_unreal": -0.0918,
+   "unpriced_out_n": 0,
+   "unpriced_out_basis": 0
   },
   "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
    "name": "0x400f (item bot)",
@@ -103,15 +103,15 @@
      "collection": "pudgypenguins",
      "token": "1381",
      "basis": 4.370179959759681,
-     "floor": 4.68993298999932,
-     "unreal": 0.31975303023963875
+     "floor": 4.68966600999815,
+     "unreal": 0.3194860502384689
     }
    ],
    "mtm_basis": 4.3702,
-   "mtm_floor": 4.6899,
-   "mtm_unreal": 0.3198,
-   "unpriced_out_n": 76,
-   "unpriced_out_basis": 241.1017
+   "mtm_floor": 4.6897,
+   "mtm_unreal": 0.3195,
+   "unpriced_out_n": 0,
+   "unpriced_out_basis": 0
   },
   "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
    "name": "0x8e8d (vault)",
@@ -129,8 +129,8 @@
    "mtm_basis": 0,
    "mtm_floor": 0,
    "mtm_unreal": 0,
-   "unpriced_out_n": 45,
-   "unpriced_out_basis": 398.1876
+   "unpriced_out_n": 0,
+   "unpriced_out_basis": 0
   }
  },
  "total": {
@@ -145,13 +145,15 @@
    "win": 75.3
   },
   "mtm_basis": 7.6757,
-  "mtm_floor": 7.9368,
-  "mtm_unreal": 0.2612,
-  "unpriced_out_n": 137,
-  "unpriced_out_basis": 751.0283,
+  "mtm_floor": 7.9034,
+  "mtm_unreal": 0.2277,
+  "unpriced_out_n": 0,
+  "unpriced_out_basis": 0,
   "burned_n": 40,
   "burned_basis": 14.5461,
   "migrated_n": 10,
-  "migrated_basis": 96.2095
+  "migrated_basis": 96.2095,
+  "cluster_n": 137,
+  "cluster_basis": 751.0283
  }
 }

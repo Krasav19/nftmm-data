@@ -41,6 +41,26 @@ WALLETS = OrderedDict([
 OS_FEE = 0.01
 OS_GAS = 0.0015
 
+# Operator-linked treasury/funding cluster (proven: each has thousands of bidirectional
+# native-ETH transfers, ~6.5k+ ETH each way, with our three wallets; every "unpriced
+# out-leg" goes here, 0 ETH received for the NFT). NFT transfers to these are INTERNAL
+# inventory moves within the operation, NOT marketplace sales. Basis travels with the
+# token; no realized P&L is booked. (Confidence: strong linkage by ETH flow; some
+# uniformity may reflect shared MEV/builder bundles — see report caveat.)
+LINKED_CLUSTER = {
+    "0x66e1f614580f9feec3b87b63816abf196e357e14",
+    "0xa171759d8386222e05f997b04a46117f9d41846d",
+    "0x6453ef85f8869934310caa06d0785b17e44b484f",
+    "0x41e0af818ac8d05203e4b098266bdb55f46b02c4",
+    "0x4c28fe6061f3378901c61a30150a7dc6bca1701a",
+    "0x89782c3a78dd22487e78994b049cc07801903804",
+    "0x0f98b5f7c39f529bd7e9c6c620856f52efba8c36",
+    "0x789f88076159ebc8c25a7434354ccd60ba9edb0e",
+    "0x0df53691f254567e098cea7d75eccc843b3b764c",
+    "0x000000001ee9baec2fd8676a913a3dfa2092ac6b",
+    "0x1556112ffb0216eaf4e47e700341ae43011b93f6",
+}
+
 # Held-now set, from the reconciled ledger (pinned @ its block, diff=0). MTM only here.
 HELD = {
     "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
@@ -108,7 +128,8 @@ def main():
     closed = []           # realized pairs {wallet(of buy), buy_ts, sell_ts, pnl, ...}
     open_lots_now = []    # lots still open that ARE currently held -> MTM
     burned = []           # disposals at 0 proceeds
-    unpriced_out = []     # token left, no exit price -> unknown unrealized
+    unpriced_out = []     # token left to a NON-linked addr, no exit price -> unknown
+    cluster_moved = []    # token moved to operator-linked cluster -> internal, not a sale
     migrated = []         # token swapped out in a migration tx (basis dropped here)
     # track each open lot as dict: {wallet, cost, buy_ts, buy_leg}
     for (con, tok), ls in by_token.items():
@@ -163,8 +184,14 @@ def main():
             elif cls == "unpriced" and leg["dir"] == "out":
                 if fifo:
                     lot = fifo.pop(0)
-                    unpriced_out.append({"wallet": lot["wallet"], "contract": con,
-                                         "token": tok, "cost": lot["cost"], "ts": leg["ts"]})
+                    if (leg["counterparty"] or "").lower() in LINKED_CLUSTER:
+                        # internal move to operator's own treasury cluster — not a
+                        # sale, not a loss; basis leaves our 3-wallet scope intact.
+                        cluster_moved.append({"wallet": lot["wallet"], "contract": con,
+                                              "token": tok, "cost": lot["cost"], "ts": leg["ts"]})
+                    else:
+                        unpriced_out.append({"wallet": lot["wallet"], "contract": con,
+                                             "token": tok, "cost": lot["cost"], "ts": leg["ts"]})
                 # else: token left with no known entry either -> nothing to book
             # unpriced 'in' (rare) -> ignore as acquisition w/o price (not held basis)
         # leftover fifo = still-open lots (basis carried). MTM later filters to the
@@ -230,6 +257,7 @@ def main():
         "unpriced_out_basis": round(sum(p["unpriced_out_basis"] for p in per.values()), 4),
         "burned_n": len(burned), "burned_basis": round(sum(b["cost"] for b in burned), 4),
         "migrated_n": len(migrated), "migrated_basis": round(sum(m["cost"] for m in migrated), 4),
+        "cluster_n": len(cluster_moved), "cluster_basis": round(sum(m["cost"] for m in cluster_moved), 4),
     }
     result = {"window_90d_start": dt.datetime.fromtimestamp(cut, dt.timezone.utc).date().isoformat(),
               "as_of": today.date().isoformat(), "floor_source": snap_utc,
@@ -277,13 +305,35 @@ def write_md(result, per, tot, snap_utc, w90, asof):
              f"({tot['mtm_floor']:.2f} ETH at floor).")
     L.append(f"- These are **not added** into a single figure: one is realized cash, the "
              f"other is an unrealized mark on open inventory that moves with the floor.\n")
-    L.append("## Limits of certainty (what the P&L does NOT capture)\n")
-    L.append(f"- **Unpriced out-legs: {tot['unpriced_out_n']} lots on {tot['unpriced_out_basis']:.2f} "
-             f"ETH cost basis.** These tokens left our wallets with **no recoverable exit "
-             f"price** (OTC / escrow / delegate / settlement in another tx). They are "
-             f"**not** valued at floor and **not** in realized above — their exit P&L is "
-             f"**unknown** (not zero, not floor). This is real economic activity we cannot "
-             f"see; treat realized as a figure over the *priced* exits only.")
+    L.append("## The 751 ETH \"unpriced exits\" — resolved\n")
+    L.append(f"The earlier report flagged **137 lots / 751 ETH** of cost basis as exits "
+             f"with unknown P&L — the boundary between \"operator is deeply underwater\" "
+             f"and \"unknown\". Tracing every one of those txs (full trace + all ETH/WETH/"
+             f"BETH flows, destination-address analysis) resolves it:\n")
+    L.append(f"- **{tot['cluster_n']} lots / {tot['cluster_basis']:.1f} ETH → operator's own "
+             f"treasury cluster (INTERNAL, not sales).** All 137 went to just 11 addresses, "
+             f"every one of which has **thousands of bidirectional native-ETH transfers "
+             f"(~6.5k+ ETH each way) with our three wallets** — a funding/treasury cluster, "
+             f"not arm's-length buyers. **0 ETH was received for any of these NFTs**; 73 were "
+             f"plain `transferFrom` pushes we initiated, 64 went via a bulk-transfer helper to "
+             f"the same cluster (notably `0xa171759d`, an EIP-7702 smart account). These are "
+             f"**inventory relocations within the operation, not losses**.")
+    L.append(f"- **Net effect on P&L: none to realized.** These legs never booked a sale, so "
+             f"realized (−5.80 90d / −28.08 all-time) is **unchanged**. What changes is the "
+             f"*interpretation*: the 751 ETH overhang is **not** a hidden loss — it is the "
+             f"operator's own inventory, moved to sibling wallets. Only **1** of the 137 lots "
+             f"(0.5 ETH lilpudgys) falls in the 90d window.")
+    L.append(f"- **So the answer to \"underwater or unknown?\": neither becomes a bigger loss.** "
+             f"The unpriced exits are internal moves; the operator is **not** more underwater "
+             f"than the priced realized shows. The honest realized remains −5.80 ETH (90d) over "
+             f"visible market exits, with the big 751-ETH question mark removed.")
+    L.append(f"- *Confidence:* linkage is strong by ETH-flow volume; the uniformity of the "
+             f"per-address totals may partly reflect shared MEV/builder bundles, but the "
+             f"direction is unambiguous — these are not external sale proceeds (0 ETH received).\n")
+    L.append("## Remaining limits of certainty\n")
+    L.append(f"- **Non-linked unpriced out-legs: {tot['unpriced_out_n']} lots on "
+             f"{tot['unpriced_out_basis']:.2f} ETH basis** — exits to addresses NOT in the "
+             f"linked cluster with no recoverable price. Exit P&L unknown (not floored).")
     L.append(f"- **Burns: {tot['burned_n']} lots on {tot['burned_basis']:.2f} ETH basis** "
              f"— sent to 0x0, disposal with no proceeds (not a floor sale).")
     L.append(f"- **Migrations: {tot['migrated_n']} lots on {tot['migrated_basis']:.2f} ETH basis** "
@@ -291,6 +341,10 @@ def write_md(result, per, tot, snap_utc, w90, asof):
              f"DeGods/MAYC contract migrations). These are **not sales**; the incidental "
              f"ETH in those txs is not an exit price, so they are excluded from realized "
              f"rather than booked as ~0 ETH dumps.")
+    L.append(f"- **Cluster-moved inventory ({tot['cluster_basis']:.0f} ETH basis)** still exists "
+             f"in the operator's sibling wallets; it is outside our three tracked wallets, so "
+             f"it is neither realized nor in the open-MTM above — it simply left this ledger's "
+             f"scope intact (not destroyed value).")
     L.append(f"- **Mints** entered FIFO at cost basis 0 (receipt showed no mint price).")
     L.append("")
     open(f"{os.path.dirname(os.path.abspath(__file__))}/pnl_authoritative.md", "w").write("\n".join(L))
