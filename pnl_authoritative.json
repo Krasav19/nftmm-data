@@ -1,0 +1,157 @@
+{
+ "window_90d_start": "2026-03-17",
+ "as_of": "2026-06-15",
+ "floor_source": "2026-06-15T16:45:01Z",
+ "by_wallet": {
+  "0x028296d8bf1995549d5b9446622cf565bbd0a26e": {
+   "name": "0x0282 (trait bot)",
+   "realized_all": {
+    "trips": 421,
+    "pnl": 3.1632,
+    "win": 46.8
+   },
+   "realized_90d": {
+    "trips": 115,
+    "pnl": 1.1193,
+    "win": 75.7
+   },
+   "mtm": [
+    {
+     "collection": "clonex",
+     "token": "1798",
+     "basis": 0.3435,
+     "floor": 0.285,
+     "unreal": -0.05850000000000005
+    },
+    {
+     "collection": "clonex",
+     "token": "4248",
+     "basis": 0.3435,
+     "floor": 0.285,
+     "unreal": -0.05850000000000005
+    },
+    {
+     "collection": "clonex",
+     "token": "7864",
+     "basis": 0.2895,
+     "floor": 0.285,
+     "unreal": -0.004500000000000004
+    },
+    {
+     "collection": "clonex",
+     "token": "11598",
+     "basis": 0.3025,
+     "floor": 0.285,
+     "unreal": -0.017500000000000016
+    },
+    {
+     "collection": "clonex",
+     "token": "12054",
+     "basis": 0.2805,
+     "floor": 0.285,
+     "unreal": 0.0044999999999999485
+    },
+    {
+     "collection": "clonex",
+     "token": "15474",
+     "basis": 0.2935,
+     "floor": 0.285,
+     "unreal": -0.008500000000000008
+    },
+    {
+     "collection": "clonex",
+     "token": "19543",
+     "basis": 0.3435,
+     "floor": 0.285,
+     "unreal": -0.05850000000000005
+    },
+    {
+     "collection": "lilpudgys",
+     "token": "16549",
+     "basis": 0.4615,
+     "floor": 0.52189999999999,
+     "unreal": 0.06039999999999002
+    },
+    {
+     "collection": "otherside-koda",
+     "token": "8369",
+     "basis": 0.6475,
+     "floor": 0.72999999,
+     "unreal": 0.08249999000000008
+    }
+   ],
+   "mtm_basis": 3.3055,
+   "mtm_floor": 3.2469,
+   "mtm_unreal": -0.0586,
+   "unpriced_out_n": 16,
+   "unpriced_out_basis": 111.739
+  },
+  "0x400f2bd92098c386cea677d6e7f832eb25c6e3cf": {
+   "name": "0x400f (item bot)",
+   "realized_all": {
+    "trips": 307,
+    "pnl": -3.0986,
+    "win": 60.6
+   },
+   "realized_90d": {
+    "trips": 83,
+    "pnl": -6.9227,
+    "win": 74.7
+   },
+   "mtm": [
+    {
+     "collection": "pudgypenguins",
+     "token": "1381",
+     "basis": 4.370179959759681,
+     "floor": 4.68993298999932,
+     "unreal": 0.31975303023963875
+    }
+   ],
+   "mtm_basis": 4.3702,
+   "mtm_floor": 4.6899,
+   "mtm_unreal": 0.3198,
+   "unpriced_out_n": 76,
+   "unpriced_out_basis": 241.1017
+  },
+  "0x8e8d6246c45d0e7f68172e85573546d90fc2e062": {
+   "name": "0x8e8d (vault)",
+   "realized_all": {
+    "trips": 301,
+    "pnl": -28.1487,
+    "win": 42.9
+   },
+   "realized_90d": {
+    "trips": 0,
+    "pnl": 0,
+    "win": 0.0
+   },
+   "mtm": [],
+   "mtm_basis": 0,
+   "mtm_floor": 0,
+   "mtm_unreal": 0,
+   "unpriced_out_n": 45,
+   "unpriced_out_basis": 398.1876
+  }
+ },
+ "total": {
+  "realized_all": {
+   "trips": 1029,
+   "pnl": -28.0841,
+   "win": 49.8
+  },
+  "realized_90d": {
+   "trips": 198,
+   "pnl": -5.8034,
+   "win": 75.3
+  },
+  "mtm_basis": 7.6757,
+  "mtm_floor": 7.9368,
+  "mtm_unreal": 0.2612,
+  "unpriced_out_n": 137,
+  "unpriced_out_basis": 751.0283,
+  "burned_n": 40,
+  "burned_basis": 14.5461,
+  "migrated_n": 10,
+  "migrated_basis": 96.2095
+ }
+}
