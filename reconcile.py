@@ -34,13 +34,18 @@ def rpc(method, params):
     return None
 
 
+# Pin all on-chain reads to the ledger's build block so chain drift (sales landing
+# after the ledger was built) can't create false mismatches. Set in main().
+AT_BLOCK = "latest"
+
+
 def balance_of(con, w):
-    r = rpc("eth_call", [{"to": con, "data": "0x70a08231" + w[2:].rjust(64, "0")}, "latest"])
+    r = rpc("eth_call", [{"to": con, "data": "0x70a08231" + w[2:].rjust(64, "0")}, AT_BLOCK])
     return int(r, 16) if r else None
 
 
 def owner_of(con, token):
-    r = rpc("eth_call", [{"to": con, "data": "0x6352211e" + hex(int(token))[2:].rjust(64, "0")}, "latest"])
+    r = rpc("eth_call", [{"to": con, "data": "0x6352211e" + hex(int(token))[2:].rjust(64, "0")}, AT_BLOCK])
     return ("0x" + r[-40:]).lower() if r and len(r) >= 42 else None
 
 
@@ -50,8 +55,13 @@ WN = {"0x028296d8bf1995549d5b9446622cf565bbd0a26e": "0x0282",
 
 
 def main():
+    global AT_BLOCK
     legs = [json.loads(l) for l in open(f"{ROOT}/transfer_ledger.jsonl")]
     contracts = {l["collection"]: l["contract"] for l in legs}
+    # pin reads to the ledger's last block (avoids post-build chain drift)
+    max_block = max(l["block"] for l in legs)
+    AT_BLOCK = hex(max_block)
+    print(f"(reconciling on-chain reads pinned @ block {max_block})\n")
 
     # net per (wallet, collection, token)
     net = defaultdict(int)

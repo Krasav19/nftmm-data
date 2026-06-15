@@ -8,3 +8,4 @@ __pycache__/
 private/
 analysis/logcache/
 analysis/receipt_value_cache.json
+analysis/trace_value_cache.json
